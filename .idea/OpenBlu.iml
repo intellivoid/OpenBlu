@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/database" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Objects" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Exceptions" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Abstracts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Managers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Utilities" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Abstracts/SearchMethods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/OpenVPN" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/OpenVPN/Interfaces" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Objects/VPN" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
