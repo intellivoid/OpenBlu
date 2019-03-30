@@ -11,10 +11,39 @@
     class DatabaseException extends \Exception
     {
         /**
+         * @var string
+         */
+        private $error_message;
+
+        /**
+         * @var string
+         */
+        private $query;
+
+        /**
          * DatabaseException constructor.
          */
-        public function __construct()
+        public function __construct(string $error_message, string $query)
         {
+            $this->error_message = $error_message;
+            $this->query = $query;
             parent::__construct('There was a database error', ExceptionCodes::DatabaseException, null);
         }
+
+        /**
+         * @return string
+         */
+        public function getErrorMessage(): string
+        {
+            return $this->error_message;
+        }
+
+        /**
+         * @return string
+         */
+        public function getQuery(): string
+        {
+            return $this->query;
+        }
+
     }

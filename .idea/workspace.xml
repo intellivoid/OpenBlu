@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php" afterPath="$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" afterPath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -69,8 +74,8 @@
       <file leaf-file-name="OpenBlu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
+            <state relative-caret-position="289">
+              <caret line="17" column="115" lean-forward="false" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
               <folding>
                 <element signature="e#35#89#0#PHP" expanded="true" />
               </folding>
@@ -81,11 +86,11 @@
       <file leaf-file-name="RecordManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="229" column="51" lean-forward="true" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
+            <state relative-caret-position="-387">
+              <caret line="48" column="83" lean-forward="false" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
               <folding>
-                <marker date="1553955638414" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
-                <marker date="1553955638414" expanded="true" signature="2735:2812" ph="SELECT id, p... update_records" />
+                <marker date="1553957822312" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
+                <marker date="1553957822312" expanded="true" signature="2774:2851" ph="SELECT id, p... update_records" />
               </folding>
             </state>
           </provider>
@@ -94,18 +99,51 @@
       <file leaf-file-name="VPNManager.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+            <state relative-caret-position="2568">
+              <caret line="315" column="13" lean-forward="true" selection-start-line="315" selection-start-column="13" selection-end-line="315" selection-end-column="13" />
               <folding>
                 <element signature="e#44#85#0#PHP" expanded="true" />
-                <marker date="1553957153893" expanded="true" signature="2089:2517" ph="INSERT INTO `vpns`... " />
-                <marker date="1553957153893" expanded="true" signature="4196:4427" ph="SELECT id, p... vpns" />
-                <marker date="1553957153893" expanded="true" signature="6688:7059" ph="UPDATE `vpns... " />
-                <marker date="1553957153893" expanded="true" signature="8861:8898" ph="SELECT COUNT... vpns" />
-                <marker date="1553957153893" expanded="true" signature="8867:8898" ph="select count... vpns" />
-                <marker date="1553957153893" expanded="true" signature="9320:9347" ph="SELECT sessi... vpns" />
-                <marker date="1553957153893" expanded="true" signature="9908:9941" ph="SELECT total... vpns" />
+                <marker date="1553958523103" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+                <marker date="1553958523103" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+                <marker date="1553958523103" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+                <marker date="1553958523103" expanded="true" signature="9028:9065" ph="SELECT COUNT... vpns" />
+                <marker date="1553958523103" expanded="true" signature="9034:9065" ph="select count... vpns" />
+                <marker date="1553958523103" expanded="true" signature="9487:9514" ph="SELECT sessi... vpns" />
+                <marker date="1553958523103" expanded="true" signature="10075:10108" ph="SELECT total... vpns" />
+                <marker date="1553958523103" expanded="true" signature="10722:10743" ph="SELECT id FR... vpns" />
+                <marker date="1553958523103" expanded="true" signature="11912:12095" ph="SELECT id, p... vpns" />
+                <marker date="1553958523103" expanded="true" signature="12509:12704" ph="SELECT id, p... vpns" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageNotFoundException.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExceptionCodes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseException.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/Resources/sc2.bin" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Resources/sc3.bin" />
         <option value="$PROJECT_DIR$/database/update_records.sql" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/SearchMethods/UpdateRecord.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidSearchMethodException.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/RecordNotFoundException.php" />
@@ -144,7 +181,6 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidIPAddressException.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/DefaultValues.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/SearchMethods/VPN.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/VPNNotFoundException.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenVPN/OpenVPN.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenVPN/Interfaces/ConfigInterface.php" />
@@ -152,11 +188,14 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenVPN/Import.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN/OpenVPNConfiguration.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Utilities/Corrector.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Utilities/OpenVPNConfiguration.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
         <option value="$PROJECT_DIR$/database/vpns.sql" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" />
       </list>
     </option>
@@ -238,7 +277,73 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Objects" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenBlu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Managers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenBlu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="openblu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OpenBlu" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Abstracts" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -359,18 +464,18 @@
       <workItem from="1550946046011" duration="636000" />
       <workItem from="1550963090083" duration="5512000" />
       <workItem from="1551021338287" duration="28526000" />
-      <workItem from="1553955922357" duration="1226000" />
+      <workItem from="1553955922357" duration="2599000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35900000" />
+    <option name="totallyTimeSpent" value="37273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1744713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1744713" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12462236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -434,8 +539,8 @@
         <state relative-caret-position="3740">
           <caret line="229" column="51" lean-forward="false" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
           <folding>
-            <marker date="1553955638414" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
-            <marker date="1553955638414" expanded="true" signature="2735:2812" ph="SELECT id, p... update_records" />
+            <marker date="1553957822312" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
+            <marker date="1553957822312" expanded="true" signature="2774:2851" ph="SELECT id, p... update_records" />
           </folding>
         </state>
       </provider>
@@ -456,13 +561,16 @@
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
             <element signature="e#44#85#0#PHP" expanded="true" />
-            <marker date="1553957153893" expanded="true" signature="2089:2517" ph="INSERT INTO `vpns`... " />
-            <marker date="1553957153893" expanded="true" signature="4196:4427" ph="SELECT id, p... vpns" />
-            <marker date="1553957153893" expanded="true" signature="6688:7059" ph="UPDATE `vpns... " />
-            <marker date="1553957153893" expanded="true" signature="8861:8898" ph="SELECT COUNT... vpns" />
-            <marker date="1553957153893" expanded="true" signature="8867:8898" ph="select count... vpns" />
-            <marker date="1553957153893" expanded="true" signature="9320:9347" ph="SELECT sessi... vpns" />
-            <marker date="1553957153893" expanded="true" signature="9908:9941" ph="SELECT total... vpns" />
+            <marker date="1553958523103" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+            <marker date="1553958523103" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+            <marker date="1553958523103" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+            <marker date="1553958523103" expanded="true" signature="9028:9065" ph="SELECT COUNT... vpns" />
+            <marker date="1553958523103" expanded="true" signature="9034:9065" ph="select count... vpns" />
+            <marker date="1553958523103" expanded="true" signature="9487:9514" ph="SELECT sessi... vpns" />
+            <marker date="1553958523103" expanded="true" signature="10075:10108" ph="SELECT total... vpns" />
+            <marker date="1553958523103" expanded="true" signature="10722:10743" ph="SELECT id FR... vpns" />
+            <marker date="1553958523103" expanded="true" signature="11912:12095" ph="SELECT id, p... vpns" />
+            <marker date="1553958523103" expanded="true" signature="12509:12704" ph="SELECT id, p... vpns" />
           </folding>
         </state>
       </provider>
@@ -488,6 +596,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="41" lean-forward="false" selection-start-line="4" selection-start-column="41" selection-end-line="4" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -508,17 +617,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidSearchMethodException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="57" lean-forward="true" selection-start-line="9" selection-start-column="57" selection-end-line="9" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -526,6 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -533,6 +637,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="19" lean-forward="false" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -563,6 +668,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="4" lean-forward="false" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -585,6 +691,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -596,17 +703,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="41" lean-forward="false" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/VPNNotFoundException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -663,27 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding>
-            <element signature="e#35#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="229" column="51" lean-forward="true" selection-start-line="229" selection-start-column="51" selection-end-line="229" selection-end-column="51" />
-          <folding>
-            <marker date="1553955638414" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
-            <marker date="1553955638414" expanded="true" signature="2735:2812" ph="SELECT id, p... update_records" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/2434abcd/c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/openblu.vpns">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -697,19 +777,67 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="true" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-387">
+          <caret line="48" column="83" lean-forward="false" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
+          <folding>
+            <marker date="1553957822312" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
+            <marker date="1553957822312" expanded="true" signature="2774:2851" ph="SELECT id, p... update_records" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="42" lean-forward="false" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="115" lean-forward="false" selection-start-line="17" selection-start-column="115" selection-end-line="17" selection-end-column="115" />
+          <folding>
+            <element signature="e#35#89#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+        <state relative-caret-position="2568">
+          <caret line="315" column="13" lean-forward="true" selection-start-line="315" selection-start-column="13" selection-end-line="315" selection-end-column="13" />
           <folding>
             <element signature="e#44#85#0#PHP" expanded="true" />
-            <marker date="1553957153893" expanded="true" signature="2089:2517" ph="INSERT INTO `vpns`... " />
-            <marker date="1553957153893" expanded="true" signature="4196:4427" ph="SELECT id, p... vpns" />
-            <marker date="1553957153893" expanded="true" signature="6688:7059" ph="UPDATE `vpns... " />
-            <marker date="1553957153893" expanded="true" signature="8861:8898" ph="SELECT COUNT... vpns" />
-            <marker date="1553957153893" expanded="true" signature="8867:8898" ph="select count... vpns" />
-            <marker date="1553957153893" expanded="true" signature="9320:9347" ph="SELECT sessi... vpns" />
-            <marker date="1553957153893" expanded="true" signature="9908:9941" ph="SELECT total... vpns" />
+            <marker date="1553958523103" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+            <marker date="1553958523103" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+            <marker date="1553958523103" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+            <marker date="1553958523103" expanded="true" signature="9028:9065" ph="SELECT COUNT... vpns" />
+            <marker date="1553958523103" expanded="true" signature="9034:9065" ph="select count... vpns" />
+            <marker date="1553958523103" expanded="true" signature="9487:9514" ph="SELECT sessi... vpns" />
+            <marker date="1553958523103" expanded="true" signature="10075:10108" ph="SELECT total... vpns" />
+            <marker date="1553958523103" expanded="true" signature="10722:10743" ph="SELECT id FR... vpns" />
+            <marker date="1553958523103" expanded="true" signature="11912:12095" ph="SELECT id, p... vpns" />
+            <marker date="1553958523103" expanded="true" signature="12509:12704" ph="SELECT id, p... vpns" />
           </folding>
         </state>
       </provider>

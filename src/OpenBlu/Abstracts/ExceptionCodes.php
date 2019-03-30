@@ -15,4 +15,5 @@
         const SyncException = 104;
         const InvalidIPAddressException = 105;
         const VPNNotFoundException = 106;
+        const PageNotFoundException = 107;
     }

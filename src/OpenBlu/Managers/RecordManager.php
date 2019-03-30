@@ -46,7 +46,7 @@
             }
             else
             {
-                throw new DatabaseException();
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
         }
 
@@ -83,7 +83,7 @@
 
             if($QueryResults == false)
             {
-                throw new DatabaseException();
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
             else
             {

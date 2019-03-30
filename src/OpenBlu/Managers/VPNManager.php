@@ -5,6 +5,7 @@
     use OpenBlu\Exceptions\DatabaseException;
     use OpenBlu\Exceptions\InvalidIPAddressException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
+    use OpenBlu\Exceptions\PageNotFoundException;
     use OpenBlu\Exceptions\VPNNotFoundException;
     use OpenBlu\Objects\VPN;
     use OpenBlu\OpenBlu;
@@ -65,7 +66,7 @@
             }
             else
             {
-                throw new DatabaseException();
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
         }
 
@@ -107,7 +108,7 @@
 
             if($QueryResults == false)
             {
-                throw new DatabaseException();
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
             else
             {
@@ -169,7 +170,7 @@
             }
             else
             {
-                throw new DatabaseException();
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
         }
 
@@ -285,5 +286,96 @@
             }
 
             return $Results;
+        }
+
+        /**
+         * Returns the total amount of pages that are available
+         *
+         * @return int
+         * @throws DatabaseException
+         */
+        public function totalServerPages(): int
+        {
+            $Query = "SELECT id FROM `vpns`";
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == false)
+            {
+                throw new DatabaseException($this->openBlu->database->error, $Query);
+            }
+            else
+            {
+                if($QueryResults->num_rows == 0)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return ceil($QueryResults->num_rows / 20);
+                }
+            }
+        }
+
+        /**
+         * Returns the contents of the query page
+         *
+         * @param int $page
+         * @return array
+         * @throws DatabaseException
+         * @throws PageNotFoundException
+         */
+        public function getServerPage(int $page): array
+        {
+            $TotalPages = $this->totalServerPages();
+
+            if($page > $TotalPages)
+            {
+                throw new PageNotFoundException();
+            }
+
+            if($page < 1)
+            {
+                throw new PageNotFoundException();
+            }
+
+            $Query = null;
+            if($page == 1)
+            {
+                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY  `last_updated` DESC LIMIT 0, 20";
+            }
+            else
+            {
+                $CurrentPage = 0;
+                $StartingItem = 0;
+
+                while(true)
+                {
+                    $CurrentPage += 1;
+                    $StartingItem += 20;
+                    if($CurrentPage == $page - 1)
+                    {
+                        break;
+                    }
+                }
+
+                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY  `last_updated` DESC LIMIT $StartingItem, 20";
+            }
+
+            $QueryResults = $this->openBlu->database->query($Query);
+            if($QueryResults == false)
+            {
+                throw new DatabaseException($this->openBlu->database->error, $Query);
+            }
+            else
+            {
+                $ResultsArray = [];
+
+                while($Row = $QueryResults->fetch_assoc())
+                {
+                    $ResultsArray[] = $Row;
+                }
+
+                return $ResultsArray;
+            }
         }
     }
