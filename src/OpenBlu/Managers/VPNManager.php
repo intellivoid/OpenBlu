@@ -219,4 +219,71 @@
            return true;
         }
 
+        /**
+         * Returns the total amount of servers available in the database
+         *
+         * @return int
+         */
+        public function totalServers(): int
+        {
+            $Query = "SELECT COUNT(id) AS total FROM `vpns`";
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == false)
+            {
+                return 0;
+            }
+
+            return (int)$QueryResults['total'];
+        }
+
+        /**
+         * Returns the current amount of sessions in total
+         *
+         * @return int
+         */
+        public function currentSessions(): int
+        {
+            $Query = "SELECT sessions FROM `vpns`";
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == false)
+            {
+                return 0;
+            }
+
+            $Results = 0;
+
+            while($Row = $QueryResults->fetch_array())
+            {
+                $Results += (int)$Row['sessions'];
+            }
+
+            return $Results;
+        }
+
+        /**
+         * Returns the total amount of sessions in total
+         *
+         * @return int
+         */
+        public function totalSessions(): int
+        {
+            $Query = "SELECT total_sessions FROM `vpns`";
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == false)
+            {
+                return 0;
+            }
+
+            $Results = 0;
+
+            while($Row = $QueryResults->fetch_array())
+            {
+                $Results += (int)$Row['total_sessions'];
+            }
+
+            return $Results;
+        }
     }
