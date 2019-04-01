@@ -15,6 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/OpenVPN" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/OpenVPN/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Objects/VPN" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Managers/Analytics" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
