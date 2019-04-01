@@ -16,6 +16,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/OpenVPN/Interfaces" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Objects/VPN" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/Managers/Analytics" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/ZiProto" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/ZiProto/Abstracts" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/ZiProto/Exception" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/ZiProto/Type" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/OpenBlu/ZiProto/TypeTransformer" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

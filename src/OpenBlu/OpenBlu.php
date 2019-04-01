@@ -3,7 +3,6 @@
     namespace OpenBlu;
 
     use OpenBlu\Exceptions\ConfigurationNotFoundException;
-    use OpenBlu\Managers\Analytics;
     use OpenBlu\Managers\RecordManager;
     use OpenBlu\Managers\VPNManager;
 
@@ -21,8 +20,6 @@
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'UpdateRecordNotFoundException.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'VPNNotFoundException.php');
 
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'Analytics' . DIRECTORY_SEPARATOR . 'VpnUsage.php');
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'Analytics.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'RecordManager.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'VPNManager.php');
 
@@ -61,11 +58,6 @@
         private $VPNManager;
 
         /**
-         * @var Analytics
-         */
-        private $Analytics;
-
-        /**
          * OpenBlu constructor.
          * @throws ConfigurationNotFoundException
          */
@@ -86,7 +78,6 @@
                 $this->configuration['DatabasePort']
             );
 
-            $this->Analytics = new Analytics($this);
             $this->RecordManager = new RecordManager($this);
             $this->VPNManager = new VPNManager($this);
         }
@@ -105,13 +96,5 @@
         public function getVPNManager(): VPNManager
         {
             return $this->VPNManager;
-        }
-
-        /**
-         * @return Analytics
-         */
-        public function getAnalytics(): Analytics
-        {
-            return $this->Analytics;
         }
     }
