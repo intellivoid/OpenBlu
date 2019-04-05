@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -53,19 +54,19 @@
       <file leaf-file-name="VPNManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="45" selection-end-line="381" selection-end-column="45" />
+            <state relative-caret-position="102">
+              <caret line="388" column="183" lean-forward="false" selection-start-line="388" selection-start-column="183" selection-end-line="388" selection-end-column="183" />
               <folding>
-                <marker date="1554493095065" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-                <marker date="1554493095065" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-                <marker date="1554493095065" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-                <marker date="1554493095065" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
-                <marker date="1554493095065" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
-                <marker date="1554493095065" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
-                <marker date="1554493095065" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
-                <marker date="1554493095065" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
-                <marker date="1554493095065" expanded="true" signature="12523:12718" ph="SELECT id, p... vpns" />
-                <marker date="1554493095065" expanded="true" signature="13455:13630" ph="SELECT id, p... vpns" />
+                <marker date="1554493661850" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+                <marker date="1554493661850" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+                <marker date="1554493661850" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+                <marker date="1554493661850" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
+                <marker date="1554493661850" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
+                <marker date="1554493661850" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
+                <marker date="1554493661850" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
+                <marker date="1554493661850" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
+                <marker date="1554493661850" expanded="true" signature="12523:12718" ph="SELECT id, p... vpns" />
+                <marker date="1554493661850" expanded="true" signature="13455:13633" ph="SELECT id, p... vpns" />
               </folding>
             </state>
           </provider>
@@ -382,12 +383,12 @@
       <workItem from="1554331885455" duration="7000" />
       <workItem from="1554338473089" duration="49000" />
       <workItem from="1554470129025" duration="8634000" />
-      <workItem from="1554492833853" duration="272000" />
+      <workItem from="1554492833853" duration="821000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56685000" />
+    <option name="totallyTimeSpent" value="57234000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -409,7 +410,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6436975" sideWeight="0.49697885" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -734,7 +735,7 @@
         <state relative-caret-position="218">
           <caret line="240" column="83" lean-forward="false" selection-start-line="240" selection-start-column="83" selection-end-line="240" selection-end-column="83" />
           <folding>
-            <element signature="e#43#93#0#PHP" expanded="true" />
+            <element signature="e#43#93#0#PHP" expanded="false" />
             <marker date="1554479240724" expanded="true" signature="1157:1246" ph="INSERT INTO `update_records`... " />
             <marker date="1554479240724" expanded="true" signature="2829:2906" ph="SELECT id, p... update_records" />
           </folding>
@@ -743,19 +744,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="381" column="45" lean-forward="false" selection-start-line="381" selection-start-column="45" selection-end-line="381" selection-end-column="45" />
+        <state relative-caret-position="102">
+          <caret line="388" column="183" lean-forward="false" selection-start-line="388" selection-start-column="183" selection-end-line="388" selection-end-column="183" />
           <folding>
-            <marker date="1554493095065" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-            <marker date="1554493095065" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-            <marker date="1554493095065" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-            <marker date="1554493095065" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
-            <marker date="1554493095065" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
-            <marker date="1554493095065" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
-            <marker date="1554493095065" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
-            <marker date="1554493095065" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
-            <marker date="1554493095065" expanded="true" signature="12523:12718" ph="SELECT id, p... vpns" />
-            <marker date="1554493095065" expanded="true" signature="13455:13630" ph="SELECT id, p... vpns" />
+            <marker date="1554493661850" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+            <marker date="1554493661850" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+            <marker date="1554493661850" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+            <marker date="1554493661850" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
+            <marker date="1554493661850" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
+            <marker date="1554493661850" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
+            <marker date="1554493661850" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
+            <marker date="1554493661850" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
+            <marker date="1554493661850" expanded="true" signature="12523:12718" ph="SELECT id, p... vpns" />
+            <marker date="1554493661850" expanded="true" signature="13455:13633" ph="SELECT id, p... vpns" />
           </folding>
         </state>
       </provider>
