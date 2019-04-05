@@ -50,7 +50,7 @@
          */
         public function __construct(string $database_name)
         {
-            $this->configuration = parse_ini_file(__DIR__ . DIRECTORY_SEPARATOR . 'configuration.ini');
+            $this->configuration = parse_ini_file(__DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'configuration.ini');
 
             $this->database = new \mysqli(
                 $this->configuration['DatabaseHost'],
