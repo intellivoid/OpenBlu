@@ -2,8 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/Analytics.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/Analytics/VpnUsage.php" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Abstracts/ExceptionCodes.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Abstracts/RecordSearchMethod.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/DatabaseException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidDayException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidHourException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidRecordSearchMethodException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/ObjectNotAvailableException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordAlreadyExistsException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordNotFoundException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Objects/DayData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Objects/MonthData.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Objects/Record.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Utilities/Builder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Utilities/Hashing.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Abstracts/Options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Abstracts/Regex.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/BufferStream.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/DecodingOptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/EncodingOptions.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/DecodingFailedException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/EncodingFailedException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InsufficientDataException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/IntegerOverflowException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InvalidOptionException.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Ext.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Packet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Type/Binary.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Type/Map.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/TypeTransformer/BinaryTransformer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/TypeTransformer/Extension.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/TypeTransformer/MapTransformer.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/TypeTransformer/Validator.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/ZiProto.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/configuration.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/OpenBlu.iml" afterPath="$PROJECT_DIR$/.idea/OpenBlu.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" afterPath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
@@ -67,16 +102,27 @@
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="openblu" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="OpenBlu.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-              <folding>
-                <element signature="e#35#89#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="408">
+              <caret line="35" column="120" lean-forward="false" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Record.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Objects/Record.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -148,10 +194,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="x" value="95" />
+    <option name="y" value="24" />
+    <option name="width" value="1221" />
+    <option name="height" value="684" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -170,7 +216,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,48 +264,13 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Utilities" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openblu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openblu" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenBlu" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Managers" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openblu" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="openblu" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="database" />
+              <option name="myItemId" value="AnalyticsManager" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,27 +392,42 @@
       <workItem from="1553955922357" duration="4125000" />
       <workItem from="1554134163560" duration="2189000" />
       <workItem from="1554143436389" duration="1268000" />
-      <workItem from="1554154900050" duration="2819000" />
+      <workItem from="1554154900050" duration="4399000" />
+      <workItem from="1554212905781" duration="503000" />
+      <workItem from="1554251001429" duration="40000" />
+      <workItem from="1554301883405" duration="525000" />
+      <workItem from="1554331885455" duration="7000" />
+      <workItem from="1554338473089" duration="49000" />
+      <workItem from="1554470129025" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45075000" />
+    <option name="totallyTimeSpent" value="48927000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="95" y="24" width="1221" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18126889" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44444445" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5030211" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12462236" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25902668" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64489114" sideWeight="0.49697885" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25377643" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998326" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -442,33 +467,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="14" lean-forward="false" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding>
-            <element signature="e#35#89#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#85#0#PHP" expanded="true" />
-            <marker date="1554134177880" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-            <marker date="1554134177880" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-            <marker date="1554134177880" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-            <marker date="1554134177880" expanded="true" signature="9028:9065" ph="SELECT COUNT... vpns" />
-            <marker date="1554134177880" expanded="true" signature="9034:9065" ph="select count... vpns" />
-            <marker date="1554134177880" expanded="true" signature="9502:9529" ph="SELECT sessi... vpns" />
-            <marker date="1554134177880" expanded="true" signature="10090:10123" ph="SELECT total... vpns" />
-            <marker date="1554134177880" expanded="true" signature="10737:10758" ph="SELECT id FR... vpns" />
-            <marker date="1554134177880" expanded="true" signature="11927:12110" ph="SELECT id, p... vpns" />
-            <marker date="1554134177880" expanded="true" signature="12524:12719" ph="SELECT id, p... vpns" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -544,7 +546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -552,7 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="9" lean-forward="true" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -670,10 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
           <caret line="48" column="83" lean-forward="false" selection-start-line="48" selection-start-column="83" selection-end-line="48" selection-end-column="83" />
-          <folding>
-            <marker date="1553957822312" expanded="true" signature="1102:1191" ph="INSERT INTO `update_records`... " />
-            <marker date="1553957822312" expanded="true" signature="2774:2851" ph="SELECT id, p... update_records" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -709,69 +705,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="230" column="4" lean-forward="false" selection-start-line="230" selection-start-column="4" selection-end-line="230" selection-end-column="4" />
-          <folding>
-            <element signature="e#44#85#0#PHP" expanded="true" />
-            <marker date="1554134177880" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-            <marker date="1554134177880" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-            <marker date="1554134177880" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-            <marker date="1554134177880" expanded="true" signature="9028:9065" ph="SELECT COUNT... vpns" />
-            <marker date="1554134177880" expanded="true" signature="9034:9065" ph="select count... vpns" />
-            <marker date="1554134177880" expanded="true" signature="9502:9529" ph="SELECT sessi... vpns" />
-            <marker date="1554134177880" expanded="true" signature="10090:10123" ph="SELECT total... vpns" />
-            <marker date="1554134177880" expanded="true" signature="10737:10758" ph="SELECT id FR... vpns" />
-            <marker date="1554134177880" expanded="true" signature="11927:12110" ph="SELECT id, p... vpns" />
-            <marker date="1554134177880" expanded="true" signature="12524:12719" ph="SELECT id, p... vpns" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics.php">
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics.php" />
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ZiProto/Type/Map.php" />
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/Builder.php" />
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics/UsageMonth.php" />
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics/VpnUsage.php" />
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Objects/Record.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="11" lean-forward="false" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ZiProto/Type/Map.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics/UsageMonth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="92" column="5" lean-forward="true" selection-start-line="92" selection-start-column="5" selection-end-line="92" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/Analytics/VpnUsage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="43" column="86" lean-forward="false" selection-start-line="43" selection-start-column="86" selection-end-line="43" selection-end-column="86" />
+        <state relative-caret-position="323">
+          <caret line="19" column="39" lean-forward="true" selection-start-line="19" selection-start-column="39" selection-end-line="19" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding>
-            <element signature="e#35#89#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="408">
+          <caret line="35" column="120" lean-forward="false" selection-start-line="35" selection-start-column="120" selection-end-line="35" selection-end-column="120" />
+          <folding />
         </state>
       </provider>
     </entry>
