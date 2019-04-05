@@ -245,6 +245,18 @@
                             $VPNObject->Certificate = $Configuration['cert'];
                             $VPNObject->Key = $Configuration['key'];
 
+                            if(strlen($VPNObject->Country) == 0)
+                            {
+                                $VPNObject->Country = 'Unknown';
+                                $VPNObject->Country = 'N/A';
+                            }
+
+                            if(strlen($VPNObject->CountryShort) == 0)
+                            {
+                                $VPNObject->Country = 'Unknown';
+                                $VPNObject->Country = 'N/A';
+                            }
+
                             $this->openBlu->getVPNManager()->syncVPN($VPNObject);
                         }
                     }
