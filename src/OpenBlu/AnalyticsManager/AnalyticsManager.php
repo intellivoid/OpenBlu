@@ -3,6 +3,8 @@
     namespace AnalyticsManager;
 
 
+    use AnalyticsManager\Managers\Manager;
+
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'ExceptionCodes.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'RecordSearchMethod.php');
 
@@ -45,6 +47,11 @@
         private $database;
 
         /**
+         * @var Manager
+         */
+        private $Manager;
+
+        /**
          * AnalyticsManager constructor.
          * @param string $database_name
          */
@@ -59,6 +66,8 @@
                 $database_name,
                 $this->configuration['DatabasePort']
             );
+
+            $this->Manager = new Manager($this);
         }
 
         /**
@@ -75,6 +84,14 @@
         public function getDatabase(): \mysqli
         {
             return $this->database;
+        }
+
+        /**
+         * @return Manager
+         */
+        public function getManager(): Manager
+        {
+            return $this->Manager;
         }
 
     }

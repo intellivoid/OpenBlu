@@ -45,7 +45,7 @@
          */
         public function createRecord(string $table, string $name): Record
         {
-            if($this->nameExists($table, $name) == false)
+            if($this->nameExists($table, $name) == true)
             {
                 throw new RecordAlreadyExistsException();
             }
@@ -83,7 +83,7 @@
             $table = $this->analyticsManager->getDatabase()->real_escape_string($table);
 
             /** @noinspection SqlResolve */
-            $Query = "INSERT INTO `$table` (public_id, name, this_month, last_month, today, yesterday, creation_timestamp, last_updated) ('$PublicID', '$Name', '$ThisMonth', '$LastMonth', '$Today', '$Yesterday', $CreationTimestamp, $LastUpdated)";
+            $Query = "INSERT INTO `$table` (public_id, name, this_month, last_month, today, yesterday, creation_timestamp, last_updated) VALUES ('$PublicID', '$Name', '$ThisMonth', '$LastMonth', '$Today', '$Yesterday', $CreationTimestamp, $LastUpdated)";
             $QueryResults = $this->analyticsManager->getDatabase()->query($Query);
 
             if($QueryResults == false)
@@ -173,10 +173,10 @@
             $ID = (int)$record->ID;
             $PublicID = $this->analyticsManager->getDatabase()->real_escape_string($record->PublicID);
             $Name = $this->analyticsManager->getDatabase()->real_escape_string($record->Name);
-            $ThisMonth = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->ThisMonth));
-            $LastMonth = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->LastMonth));
-            $Today = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->Today));
-            $Yesterday = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->Yesterday));
+            $ThisMonth = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->ThisMonth->toArray()));
+            $LastMonth = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->LastMonth->toArray()));
+            $Today = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->Today->toArray()));
+            $Yesterday = $this->analyticsManager->getDatabase()->real_escape_string(ZiProto::encode($record->Yesterday->toArray()));
             $CreationTimestamp = (int)$record->CreationTimestamp;
             $LastUpdated = (int)time();
 

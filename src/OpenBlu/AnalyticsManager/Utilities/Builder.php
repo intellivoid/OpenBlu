@@ -27,7 +27,7 @@
                     break;
                 }
 
-                $results_array[count($results_array)] = 0;
+                $results_array[count($results_array) + 1] = 0;
             }
 
             return $results_array;
@@ -49,7 +49,7 @@
                     break;
                 }
 
-                $results_array[count($results_array)] = 0;
+                $results_array[count($results_array) + 1] = 0;
             }
 
             return $results_array;
