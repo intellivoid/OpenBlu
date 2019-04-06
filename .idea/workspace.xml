@@ -55,19 +55,19 @@
       <file leaf-file-name="VPNManager.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="359" column="177" lean-forward="false" selection-start-line="359" selection-start-column="177" selection-end-line="359" selection-end-column="177" />
+            <state relative-caret-position="106">
+              <caret line="342" column="208" lean-forward="false" selection-start-line="342" selection-start-column="208" selection-end-line="342" selection-end-column="208" />
               <folding>
-                <marker date="1554511929693" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-                <marker date="1554511929693" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-                <marker date="1554511929693" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-                <marker date="1554511929693" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
-                <marker date="1554511929693" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
-                <marker date="1554511929693" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
-                <marker date="1554511929693" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
-                <marker date="1554511929693" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
-                <marker date="1554511929693" expanded="true" signature="12523:12713" ph="SELECT id, p... vpns" />
-                <marker date="1554511929693" expanded="true" signature="13450:13628" ph="SELECT id, p... vpns" />
+                <marker date="1554515385871" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+                <marker date="1554515385871" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+                <marker date="1554515385871" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+                <marker date="1554515385871" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
+                <marker date="1554515385871" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
+                <marker date="1554515385871" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
+                <marker date="1554515385871" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
+                <marker date="1554515385871" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
+                <marker date="1554515385871" expanded="true" signature="12523:12713" ph="SELECT id, p... vpns" />
+                <marker date="1554515385871" expanded="true" signature="13450:13628" ph="SELECT id, p... vpns" />
               </folding>
             </state>
           </provider>
@@ -89,6 +89,7 @@
     <findStrings>
       <find>last_updated</find>
       <find>(int)</find>
+      <find>20</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -386,12 +387,12 @@
       <workItem from="1554470129025" duration="8634000" />
       <workItem from="1554492833853" duration="1441000" />
       <workItem from="1554509489932" duration="659000" />
-      <workItem from="1554511912500" duration="22000" />
+      <workItem from="1554511912500" duration="880000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58535000" />
+    <option name="totallyTimeSpent" value="59393000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,19 +742,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="359" column="177" lean-forward="false" selection-start-line="359" selection-start-column="177" selection-end-line="359" selection-end-column="177" />
+        <state relative-caret-position="106">
+          <caret line="342" column="208" lean-forward="false" selection-start-line="342" selection-start-column="208" selection-end-line="342" selection-end-column="208" />
           <folding>
-            <marker date="1554511929693" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
-            <marker date="1554511929693" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
-            <marker date="1554511929693" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
-            <marker date="1554511929693" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
-            <marker date="1554511929693" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
-            <marker date="1554511929693" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
-            <marker date="1554511929693" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
-            <marker date="1554511929693" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
-            <marker date="1554511929693" expanded="true" signature="12523:12713" ph="SELECT id, p... vpns" />
-            <marker date="1554511929693" expanded="true" signature="13450:13628" ph="SELECT id, p... vpns" />
+            <marker date="1554515385871" expanded="true" signature="2139:2567" ph="INSERT INTO `vpns`... " />
+            <marker date="1554515385871" expanded="true" signature="4285:4516" ph="SELECT id, p... vpns" />
+            <marker date="1554515385871" expanded="true" signature="6816:7187" ph="UPDATE `vpns... " />
+            <marker date="1554515385871" expanded="true" signature="9027:9064" ph="SELECT COUNT... vpns" />
+            <marker date="1554515385871" expanded="true" signature="9501:9528" ph="SELECT sessi... vpns" />
+            <marker date="1554515385871" expanded="true" signature="10089:10122" ph="SELECT total... vpns" />
+            <marker date="1554515385871" expanded="true" signature="10736:10757" ph="SELECT id FR... vpns" />
+            <marker date="1554515385871" expanded="true" signature="11926:12109" ph="SELECT id, p... vpns" />
+            <marker date="1554515385871" expanded="true" signature="12523:12713" ph="SELECT id, p... vpns" />
+            <marker date="1554515385871" expanded="true" signature="13450:13628" ph="SELECT id, p... vpns" />
           </folding>
         </state>
       </provider>
