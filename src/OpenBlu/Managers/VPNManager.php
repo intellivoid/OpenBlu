@@ -340,7 +340,7 @@
             $Query = null;
             if($page == 1)
             {
-                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY  `last_updated` DESC LIMIT 0, 40";
+                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY `sessions` DESC LIMIT 0, 40";
             }
             else
             {
