@@ -32,6 +32,12 @@
             $this->openBlu = $openBlu;
         }
 
+        /**
+         * @param VPN $vpn
+         * @return bool
+         * @throws DatabaseException
+         * @throws InvalidIPAddressException
+         */
         public function registerVPN(VPN $vpn): bool
         {
             if(Validate::IP($vpn->IP) == false)
@@ -131,6 +137,7 @@
          * @throws DatabaseException
          * @throws InvalidIPAddressException
          * @throws VPNNotFoundException
+         * @throws InvalidSearchMethodException
          */
         public function updateVPN(VPN $vpn): bool
         {
@@ -179,6 +186,8 @@
          * @param string|\OpenBlu\Abstracts\SearchMethods\VPN $searchMethod
          * @param string $input
          * @return bool
+         * @throws DatabaseException
+         * @throws InvalidSearchMethodException
          */
         public function vpnExists(string $searchMethod, string $input): bool
         {
@@ -198,6 +207,10 @@
          *
          * @param VPN $vpn
          * @return bool
+         * @throws DatabaseException
+         * @throws InvalidIPAddressException
+         * @throws InvalidSearchMethodException
+         * @throws VPNNotFoundException
          */
         public function syncVPN(VPN $vpn): bool
         {
