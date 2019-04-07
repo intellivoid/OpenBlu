@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/DatabaseException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/DatabaseException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidDayException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidDayException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidHourException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidHourException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidRecordSearchMethodException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/InvalidRecordSearchMethodException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/ObjectNotAvailableException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/ObjectNotAvailableException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordAlreadyExistsException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordAlreadyExistsException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Exceptions/RecordNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/BufferStream.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/BufferStream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/DecodingFailedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/DecodingFailedException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/EncodingFailedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/EncodingFailedException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InsufficientDataException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InsufficientDataException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/IntegerOverflowException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/IntegerOverflowException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InvalidOptionException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Exception/InvalidOptionException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Packet.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/Packet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/ZiProto.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/ZiProto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/ConfigurationNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/ConfigurationNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidIPAddressException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidIPAddressException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidSearchMethodException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidSearchMethodException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/PageNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/SyncException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/SyncException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/UpdateRecordNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/UpdateRecordNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Exceptions/VPNNotFoundException.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Exceptions/VPNNotFoundException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Utilities/Corrector.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Utilities/Corrector.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Utilities/OpenVPNConfiguration.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Utilities/OpenVPNConfiguration.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -109,14 +77,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-369">
-              <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+            <state relative-caret-position="-1015">
+              <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
               <folding>
-                <marker date="1554678940342" expanded="true" signature="1651:1740" ph="INSERT INTO `update_records`... " />
-                <marker date="1554678940342" expanded="true" signature="3323:3400" ph="SELECT id, p... update_records" />
+                <marker date="1554678965032" expanded="true" signature="1688:1777" ph="INSERT INTO `update_records`... " />
+                <marker date="1554678965032" expanded="true" signature="3360:3437" ph="SELECT id, p... update_records" />
               </folding>
             </state>
           </provider>
@@ -149,7 +117,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
@@ -215,7 +183,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/console.sql" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Utilities/Builder.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Utilities/Corrector.php" />
@@ -223,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
       </list>
     </option>
   </component>
@@ -354,12 +322,12 @@
       <workItem from="1554511912500" duration="1629000" />
       <workItem from="1554554579257" duration="88000" />
       <workItem from="1554589598046" duration="77000" />
-      <workItem from="1554678023135" duration="901000" />
+      <workItem from="1554678023135" duration="955000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61208000" />
+    <option name="totallyTimeSpent" value="61262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -374,11 +342,11 @@
     <frame x="1555" y="75" width="1179" height="713" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20822163" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20822163" />
       <window_info id="Structure" order="1" weight="0.25377643" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" visible="true" weight="0.32854578" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32941177" />
       <window_info anchor="bottom" id="Message" order="1" />
@@ -390,7 +358,7 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5030211" side_tool="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.3518851" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3518851" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -644,13 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/OpenVPNConfiguration.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="107">
@@ -684,12 +645,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-369">
-          <caret line="40" column="31" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
+        <state relative-caret-position="-1015">
+          <caret line="119" column="32" lean-forward="true" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
           <folding>
-            <marker date="1554678940342" expanded="true" signature="1651:1740" ph="INSERT INTO `update_records`... " />
-            <marker date="1554678940342" expanded="true" signature="3323:3400" ph="SELECT id, p... update_records" />
+            <marker date="1554678965032" expanded="true" signature="1688:1777" ph="INSERT INTO `update_records`... " />
+            <marker date="1554678965032" expanded="true" signature="3360:3437" ph="SELECT id, p... update_records" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="23" selection-start-line="1" selection-start-column="23" selection-end-line="1" selection-end-column="23" />
         </state>
       </provider>
     </entry>
