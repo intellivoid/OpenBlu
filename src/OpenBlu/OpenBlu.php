@@ -118,4 +118,13 @@
         {
             return $this->AnalyticsManager;
         }
+
+        /**
+         * @param string $file
+         * @return string
+         */
+        public static function getResource(string $file): string
+        {
+            return(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'Resources' . DIRECTORY_SEPARATOR . $file));
+        }
     }
