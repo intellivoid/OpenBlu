@@ -439,11 +439,42 @@
             if($PlanExists == true)
             {
                 $this->updatePlan($Plan);
+                $this->updateSignatures($Plan);
                 return $Plan;
             }
 
             return $this->createPlan($Plan);
         }
 
+        /**
+         * Cancels an existing plan
+         *
+         * @param int $account_id
+         * @return bool
+         * @throws AccessKeyNotFoundException
+         * @throws DatabaseException
+         * @throws InvalidSearchMethodException
+         * @throws NoResultsFoundException
+         * @throws PlanNotFoundException
+         * @throws UnsupportedSearchMethodException
+         * @throws UpdateRecordNotFoundException
+         */
+        function cancelPlan(int $account_id): bool
+        {
+            if($this->accountIdExists($account_id) == false)
+            {
+                return false;
+            }
+
+            $Plan = $this->getPlan(PlanSearchMethod::byAccountId, $account_id);
+
+            $Plan->Active = false;
+            $Plan->PlanStarted = false;
+            $Plan->NextBillingCycle = 0;
+
+            $this->updatePlan($Plan);
+
+            return true;
+        }
 
     }
