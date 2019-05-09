@@ -196,7 +196,7 @@
                 throw new DatabaseException($this->openBlu->database->error, $Query);
             }
 
-            $AccessKeyObject = $this->modularApi->AccessKeys()->getAccessKey(AccessKeySearchMethod::byID, $plan->AccessKeyId);
+            $AccessKeyObject = $this->modularApi->AccessKeys()->Manager->get(AccessKeySearchMethod::byID, $plan->AccessKeyId);
             $AccessKeyObject->Usage->Limit = $plan->MonthlyCalls;
             $this->modularApi->AccessKeys()->Manager->update($AccessKeyObject);
 
