@@ -434,7 +434,7 @@
                 $this->modularApi->AccessKeys()->Manager->update($AccessKey);
             }
 
-            $Plan->NextBillingCycle = $AccessKey->Usage->NextInterval;
+            $Plan->NextBillingCycle = time() + $Plan->BillingCycle;
 
             if($PlanExists == true)
             {
