@@ -489,7 +489,7 @@
                     break;
 
                 case OrderBy::byLastUpdated:
-                    $Query = " ORDER BY last_updated";
+                    $Query .= " ORDER BY last_updated";
                     break;
 
                 default:
@@ -530,7 +530,8 @@
                 while ($Row = $QueryResults->fetch_assoc())
                 {
                     $Results['servers'][] = array(
-                        'id'             => $Row['public_id'],
+                        'id'             => $Row['id'],
+                        'public_id'      => $Row['public_id'],
                         'ip_address'     => $Row['ip_address'],
                         'score'          => (int)$Row['score'],
                         'ping'           => (int)$Row['ping'],
