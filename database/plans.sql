@@ -13,7 +13,7 @@ create table plans
     payment_required BOOL NULL COMMENT 'If set to true while the plan is active, this will not allow the user to make anymore requests
 until a payment has been processed to continue the subscription',
     plan_created INT(255) NULL COMMENT 'The Unix Timestamp for when this plan record was first created',
-    plan_started INT(255) NULL COMMENT 'The Unix Timestamp for when this plan was last started with it''s subscription',
+    plan_started TINYINT(1) NULL COMMENT 'The Unix Timestamp for when this plan was last started with it''s subscription',
     PRIMARY KEY (id)
 ) COMMENT 'Table for hosting plan details regarding API Keys';
 CREATE UNIQUE INDEX plans_id_uindex ON plans (id);
