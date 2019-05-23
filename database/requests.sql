@@ -1,7 +1,7 @@
 CREATE TABLE requests
 (
     id INT(255) PRIMARY KEY COMMENT 'The ID of the Request' AUTO_INCREMENT,
-    refrence_id VARCHAR(255) COMMENT 'The public Refrence ID for the Request',
+    reference_id VARCHAR(255) COMMENT 'The public Refrence ID for the Request',
     execution_time FLOAT COMMENT 'The execution time of the request (in microseconds)',
     timestamp INT(255) COMMENT 'The Unix Timestamp that this request was made',
     client_ip VARCHAR(255) COMMENT 'The IP Address of the client that made the request',
