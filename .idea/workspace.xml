@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +23,17 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - openblu@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="MySQL - openblu@127.0.0.1" type="feb32156:DbDataSourceImpl" />
+        <item name="openblu: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="FavoritesManager">
@@ -31,94 +42,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/Validate.php">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state relative-caret-position="24">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/OpenVPNConfiguration.php">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/ClientManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="61" selection-start-line="61" selection-end-line="61" />
-              <folding>
-                <element signature="e#45#83#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/ZiProto/BufferStream.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="901">
-              <caret line="62" column="29" selection-start-line="62" selection-start-column="29" selection-end-line="62" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="134" selection-start-line="134" selection-end-line="134" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="119" column="32" selection-start-line="119" selection-start-column="32" selection-end-line="119" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/Hashing.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Utilities/Corrector.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/configuration.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="24" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+            <state relative-caret-position="-1274">
+              <caret line="149" column="17" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            <state relative-caret-position="343">
+              <caret line="429" column="70" selection-start-line="429" selection-start-column="70" selection-end-line="429" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3168">
+              <caret line="139" column="88" selection-start-line="139" selection-start-column="88" selection-end-line="139" selection-end-column="88" />
+              <folding>
+                <element signature="e#35#73#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -164,7 +121,6 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenVPN/Config.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenVPN/Import.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN/OpenVPNConfiguration.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" />
         <option value="$PROJECT_DIR$/database/vpns.sql" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/DatabaseException.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Abstracts/ExceptionCodes.php" />
@@ -188,6 +144,7 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" />
       </list>
     </option>
   </component>
@@ -199,11 +156,11 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="147" />
-    <option name="y" value="134" />
-    <option name="width" value="1026" />
-    <option name="height" value="554" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="225" />
+    <option name="y" value="137" />
+    <option name="width" value="1130" />
+    <option name="height" value="624" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -235,15 +192,21 @@
               <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
-              <item name="ModularAPI" type="462c0819:PsiDirectoryNode" />
+              <item name="Managers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="OpenBlu" type="b2602c69:ProjectViewProjectNode" />
               <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
-              <item name="ModularAPI" type="462c0819:PsiDirectoryNode" />
               <item name="Objects" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenBlu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="Utilities" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -324,11 +287,19 @@
       <workItem from="1554589598046" duration="77000" />
       <workItem from="1554678023135" duration="955000" />
       <workItem from="1558646065151" duration="713000" />
+      <workItem from="1558710813396" duration="52000" />
+      <workItem from="1558821800492" duration="8000" />
+      <workItem from="1558840810266" duration="1012000" />
+      <workItem from="1558891062858" duration="1852000" />
+      <workItem from="1558959745626" duration="233000" />
+      <workItem from="1559578366390" duration="320000" />
+      <workItem from="1559591458821" duration="63000" />
+      <workItem from="1560480814314" duration="21000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61975000" />
+    <option name="totallyTimeSpent" value="65536000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -340,10 +311,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="147" y="134" width="1026" height="554" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21221532" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12783661" />
       <window_info id="Structure" order="1" weight="0.25377643" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.32941177" />
@@ -356,14 +327,14 @@
       <window_info anchor="bottom" id="TODO" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5030211" side_tool="true" weight="0.32998326" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.3517588" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.23411371" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32854578" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.20186335" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.10741301" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16263238" />
@@ -390,13 +361,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/SyncException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Exceptions/InvalidIPAddressException.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -444,13 +408,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenVPN/Import.php" />
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN/OpenVPNConfiguration.php" />
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="452">
-          <caret line="146" column="48" selection-start-line="146" selection-start-column="48" selection-end-line="146" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/UpdateRecord.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1394">
@@ -563,25 +520,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2873">
           <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <marker date="1554678619968" expanded="true" signature="2296:2724" ph="INSERT INTO `vpns`... " />
-            <marker date="1554678619968" expanded="true" signature="4442:4673" ph="SELECT id, p... vpns" />
-            <marker date="1554678619968" expanded="true" signature="7021:7392" ph="UPDATE `vpns... " />
-            <marker date="1554678619968" expanded="true" signature="9487:9524" ph="SELECT COUNT... vpns" />
-            <marker date="1554678619968" expanded="true" signature="9961:9988" ph="SELECT sessi... vpns" />
-            <marker date="1554678619968" expanded="true" signature="10549:10582" ph="SELECT total... vpns" />
-            <marker date="1554678619968" expanded="true" signature="11196:11217" ph="SELECT id FR... vpns" />
-            <marker date="1554678619968" expanded="true" signature="12386:12564" ph="SELECT id, p... vpns" />
-            <marker date="1554678619968" expanded="true" signature="12978:13168" ph="SELECT id, p... vpns" />
-            <marker date="1554678619968" expanded="true" signature="13905:14083" ph="SELECT id, p... vpns" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -653,8 +591,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="24">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3168">
+          <caret line="139" column="88" selection-start-line="139" selection-start-column="88" selection-end-line="139" selection-end-column="88" />
+          <folding>
+            <element signature="e#35#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/ClientManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1274">
+          <caret line="149" column="17" selection-start-line="149" selection-start-column="17" selection-end-line="149" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="429" column="70" selection-start-line="429" selection-start-column="70" selection-end-line="429" selection-end-column="70" />
         </state>
       </provider>
     </entry>
