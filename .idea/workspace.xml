@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +39,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -59,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="429" column="70" selection-start-line="429" selection-start-column="70" selection-end-line="429" selection-end-column="70" />
+            <state relative-caret-position="391">
+              <caret line="431" column="5" lean-forward="true" selection-start-line="431" selection-start-column="5" selection-end-line="431" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -143,8 +141,8 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/Managers/Manager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
       </list>
     </option>
   </component>
@@ -294,12 +292,12 @@
       <workItem from="1558959745626" duration="233000" />
       <workItem from="1559578366390" duration="320000" />
       <workItem from="1559591458821" duration="63000" />
-      <workItem from="1560480814314" duration="21000" />
+      <workItem from="1560480814314" duration="87000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65536000" />
+    <option name="totallyTimeSpent" value="65602000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,13 +587,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3168">
@@ -615,8 +606,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="429" column="70" selection-start-line="429" selection-start-column="70" selection-end-line="429" selection-end-column="70" />
+        <state relative-caret-position="391">
+          <caret line="431" column="5" lean-forward="true" selection-start-line="431" selection-start-column="5" selection-end-line="431" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
