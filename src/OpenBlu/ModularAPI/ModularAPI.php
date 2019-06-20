@@ -3,7 +3,6 @@
     namespace ModularAPI;
 
     use acm\acm;
-    use acm\Objects\Schema;
     use Exception;
     use ModularAPI\DatabaseManager\Requests;
     use ModularAPI\Managers\AccessKeyManager;
@@ -118,19 +117,6 @@
         {
             $this->acm = new acm(__DIR__, 'OpenBlu');
 
-            $DatabaseSchema = new Schema();
-            $DatabaseSchema->setDefinition('Host', 'localhost');
-            $DatabaseSchema->setDefinition('Port', '3306');
-            $DatabaseSchema->setDefinition('Username', 'root');
-            $DatabaseSchema->setDefinition('Password', '');
-            $DatabaseSchema->setDefinition('Name', 'api');
-
-            $ModularApiSchema = new Schema();
-            $ModularApiSchema->setDefinition('IssuerName', 'example');
-
-            $this->acm->defineSchema('Database', $DatabaseSchema);
-            $this->acm->defineSchema('ModularAPI', $ModularApiSchema);
-
             $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
             $this->ModularApiConfiguration = $this->acm->getConfiguration('ModularAPI');
 
@@ -187,6 +173,14 @@
         public function getModularApiConfiguration()
         {
             return $this->ModularApiConfiguration;
+        }
+
+        /**
+         * @return acm
+         */
+        public function getAcm(): acm
+        {
+            return $this->acm;
         }
 
     }

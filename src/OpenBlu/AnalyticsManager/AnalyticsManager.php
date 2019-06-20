@@ -70,7 +70,6 @@
          */
         public function __construct(string $database_name)
         {
-            //$this->configuration = parse_ini_file(__DIR__ . DIRECTORY_SEPARATOR . 'configuration.ini');
             $this->acm = new acm(__DIR__, 'OpenBlu');
             $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
 

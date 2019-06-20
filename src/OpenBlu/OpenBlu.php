@@ -75,6 +75,8 @@
         include_once(__DIR__ . DIRECTORY_SEPARATOR . 'acm' . DIRECTORY_SEPARATOR . 'acm.php');
     }
 
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'AutoConfig.php');
+
     /**
      * Class OpenBlu
      * @package OpenBlu

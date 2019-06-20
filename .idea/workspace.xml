@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/OpenBlu/AutoConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/configuration.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/configuration.ini" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,13 +50,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/configuration.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="61">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/acm/CommandLine.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="61">
+              <caret line="35" selection-start-line="35" selection-end-line="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -65,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3528">
-              <caret line="156" column="84" selection-start-line="153" selection-start-column="12" selection-end-line="156" selection-end-column="84" />
+            <state relative-caret-position="178">
+              <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
               <folding>
                 <element signature="e#35#47#0#PHP" expanded="true" />
               </folding>
@@ -75,13 +92,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/AutoConfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
+              <folding>
+                <element signature="e#12#24#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/OpenBlu/acm/acm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="186">
+              <caret line="308" column="24" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="53">
-              <caret line="133" column="72" selection-start-line="133" selection-start-column="72" selection-end-line="133" selection-end-column="72" />
-              <folding>
-                <element signature="e#38#50#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="178">
+              <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -89,8 +124,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37">
-              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="55">
+              <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+              <folding>
+                <element signature="e#44#56#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,8 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/OpenBlu/Exceptions/ConfigurationNotFoundException.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/Resources/sc1.bin" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Resources/sc2.bin" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Resources/sc3.bin" />
         <option value="$PROJECT_DIR$/database/update_records.sql" />
@@ -158,11 +194,13 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/acm/acm.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
         <option value="$PROJECT_DIR$/tests/sync.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/configuration.ini" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/setup" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/configuration.ini" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/AutoConfig.php" />
       </list>
     </option>
   </component>
@@ -175,10 +213,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="225" />
-    <option name="y" value="101" />
-    <option name="width" value="1130" />
-    <option name="height" value="624" />
+    <option name="x" value="53" />
+    <option name="y" value="18" />
+    <option name="width" value="1302" />
+    <option name="height" value="687" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -207,6 +245,20 @@
             <path>
               <item name="OpenBlu" type="b2602c69:ProjectViewProjectNode" />
               <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="AnalyticsManager" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenBlu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
+              <item name="ModularAPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="OpenBlu" type="b2602c69:ProjectViewProjectNode" />
+              <item name="OpenBlu" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -220,7 +272,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenBluAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../acm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
@@ -300,12 +352,14 @@
       <workItem from="1559591458821" duration="63000" />
       <workItem from="1560480814314" duration="1141000" />
       <workItem from="1561013254202" duration="4067000" />
-      <workItem from="1561064184097" duration="2449000" />
+      <workItem from="1561064184097" duration="3582000" />
+      <workItem from="1561073628278" duration="68000" />
+      <workItem from="1561074128757" duration="857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73172000" />
+    <option name="totallyTimeSpent" value="75230000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -320,18 +374,18 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13086233" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13388805" />
       <window_info id="Structure" order="1" weight="0.25377643" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3282313" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49697885" weight="0.6377551" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49621785" weight="0.6377551" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5030211" side_tool="true" weight="0.32998326" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50378215" side_tool="true" weight="0.6377551" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.23411371" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
@@ -367,17 +421,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenVPN/OpenVPN.php" />
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenVPN/Interfaces/ConfigInterface.php" />
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenVPN/Config.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/SPL/SPL_c1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="565" column="24" selection-start-line="565" selection-start-column="24" selection-end-line="565" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenVPN/Import.php" />
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/VPN/OpenVPNConfiguration.php" />
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Objects/UpdateRecord.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -536,13 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/acm/acm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="229" column="24" selection-start-line="229" selection-start-column="24" selection-end-line="229" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/schema/openblu/table/vpns">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -571,50 +607,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/setup">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="55">
+          <caret line="72" column="50" selection-start-line="72" selection-start-column="50" selection-end-line="72" selection-end-column="50" />
+          <folding>
+            <element signature="e#44#56#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/AutoConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="14" column="4" lean-forward="true" selection-start-line="14" selection-start-column="4" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AutoConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
+          <folding>
+            <element signature="e#11#23#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/configuration.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/configuration.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/acm/CommandLine.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/OpenBlu.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3528">
-          <caret line="156" column="84" selection-start-line="153" selection-start-column="12" selection-end-line="156" selection-end-column="84" />
+        <state relative-caret-position="178">
+          <caret line="83" column="10" selection-start-line="83" selection-start-column="10" selection-end-line="83" selection-end-column="10" />
           <folding>
             <element signature="e#35#47#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/configuration.ini">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="53">
-          <caret line="133" column="72" selection-start-line="133" selection-start-column="72" selection-end-line="133" selection-end-column="72" />
+        <state relative-caret-position="178">
+          <caret line="74" column="10" selection-start-line="74" selection-start-column="10" selection-end-line="74" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AutoConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="29" column="15" selection-start-line="29" selection-start-column="15" selection-end-line="29" selection-end-column="15" />
           <folding>
-            <element signature="e#38#50#0#PHP" expanded="true" />
+            <element signature="e#12#24#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php">
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/acm/acm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/configuration.ini">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="186">
+          <caret line="308" column="24" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
         </state>
       </provider>
     </entry>
