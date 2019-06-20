@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/OpenBlu/AutoConfig.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/analytics_manager.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/ModularAPI/modular-api.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/configuration.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/configuration.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -103,11 +96,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/acm/acm.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="53">
               <caret line="308" column="24" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/schema/openblu/table/vpns">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -194,13 +196,13 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/acm/acm.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php" />
         <option value="$PROJECT_DIR$/tests/sync.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
         <option value="$PROJECT_DIR$/src/OpenBlu/setup" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AnalyticsManager/AnalyticsManager.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/ModularAPI/ModularAPI.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/OpenBlu.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/configuration.ini" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AutoConfig.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
       </list>
     </option>
   </component>
@@ -354,12 +356,12 @@
       <workItem from="1561013254202" duration="4067000" />
       <workItem from="1561064184097" duration="3582000" />
       <workItem from="1561073628278" duration="68000" />
-      <workItem from="1561074128757" duration="857000" />
+      <workItem from="1561074128757" duration="992000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75230000" />
+    <option name="totallyTimeSpent" value="75365000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -380,7 +382,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3282313" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49621785" weight="0.6377551" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49621785" visible="true" weight="0.6377551" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -579,13 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/schema/openblu/table/vpns">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/RecordManager.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1855">
@@ -644,13 +639,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/ModularAPI/configuration.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -701,8 +689,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/acm/acm.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="53">
           <caret line="308" column="24" selection-start-line="308" selection-start-column="24" selection-end-line="308" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c25939f7-b71d-47c5-a8d6-8d84f9efd6ae/schema/openblu/table/vpns">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
