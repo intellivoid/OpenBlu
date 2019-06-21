@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -356,12 +357,12 @@
       <workItem from="1561013254202" duration="4067000" />
       <workItem from="1561064184097" duration="3582000" />
       <workItem from="1561073628278" duration="68000" />
-      <workItem from="1561074128757" duration="992000" />
+      <workItem from="1561074128757" duration="1064000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75365000" />
+    <option name="totallyTimeSpent" value="75437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -382,7 +383,7 @@
       <window_info anchor="bottom" id="Database Console" order="0" weight="0.3282313" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49621785" visible="true" weight="0.6377551" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49621785" weight="0.6377551" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
