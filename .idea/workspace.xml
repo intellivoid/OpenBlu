@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="be22784b-b2f4-4629-888f-e024a5322ee5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Netkas.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OpenBlu/openblu.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/OpenBlu/openblu.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -67,7 +66,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="24">
@@ -76,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
+            <state relative-caret-position="-1488">
               <caret line="364" column="204" selection-start-line="364" selection-start-column="204" selection-end-line="364" selection-end-column="204" />
             </state>
           </provider>
@@ -161,8 +160,8 @@
         <option value="$PROJECT_DIR$/src/OpenBlu/configuration.ini" />
         <option value="$PROJECT_DIR$/src/OpenBlu/AutoConfig.php" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/PlanManager.php" />
-        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
         <option value="$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php" />
+        <option value="$PROJECT_DIR$/src/OpenBlu/openblu.json" />
       </list>
     </option>
   </component>
@@ -340,12 +339,12 @@
       <workItem from="1561074128757" duration="1064000" />
       <workItem from="1561578590705" duration="3511000" />
       <workItem from="1561671057404" duration="340000" />
-      <workItem from="1563385791852" duration="48000" />
+      <workItem from="1563385791852" duration="82000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79336000" />
+    <option name="totallyTimeSpent" value="79370000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -692,17 +691,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1488">
+          <caret line="364" column="204" selection-start-line="364" selection-start-column="204" selection-end-line="364" selection-end-column="204" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/OpenBlu/openblu.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
           <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/OpenBlu/Managers/VPNManager.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="364" column="204" selection-start-line="364" selection-start-column="204" selection-end-line="364" selection-end-column="204" />
         </state>
       </provider>
     </entry>
