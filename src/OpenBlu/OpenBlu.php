@@ -61,11 +61,6 @@
         include_once(__DIR__ . DIRECTORY_SEPARATOR . 'AnalyticsManager' . DIRECTORY_SEPARATOR . 'AnalyticsManager.php');
     }
 
-    if(class_exists('ModularAPI\ModularAPI') == false)
-    {
-        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'ModularAPI' . DIRECTORY_SEPARATOR . 'ModularAPI.php');
-    }
-
     if(class_exists('acm\acm') == false)
     {
         include_once(__DIR__ . DIRECTORY_SEPARATOR . 'acm' . DIRECTORY_SEPARATOR . 'acm.php');
@@ -149,12 +144,6 @@
 
             $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
             $this->RecordDirectoryConfiguration = $this->acm->getConfiguration('RecordDirectory');
-            //if(file_exists(__DIR__ . DIRECTORY_SEPARATOR . 'configuration.ini') == false)
-            //{
-            //    throw new ConfigurationNotFoundException();
-            //}
-
-            //$this->configuration = parse_ini_file(__DIR__ . DIRECTORY_SEPARATOR . 'configuration.ini');
 
             $this->database = new mysqli(
                 $this->DatabaseConfiguration['Host'],
