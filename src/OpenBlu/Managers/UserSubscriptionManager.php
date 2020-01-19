@@ -5,8 +5,10 @@
 
 
     use msqg\QueryBuilder;
+    use OpenBlu\Abstracts\SearchMethods\UserSubscriptionSearchMethod;
     use OpenBlu\Abstracts\UserSubscriptionStatus;
     use OpenBlu\Exceptions\DatabaseException;
+    use OpenBlu\Exceptions\InvalidSearchMethodException;
     use OpenBlu\Objects\UserSubscription;
     use OpenBlu\OpenBlu;
 
@@ -67,4 +69,40 @@
             }
         }
 
+        public function getUserSubscription(string $search_method, int $value): UserSubscription
+        {
+            switch($search_method)
+            {
+                case UserSubscriptionSearchMethod::bySubscriptionID:
+                case UserSubscriptionSearchMethod::byAccessRecordID:
+                case UserSubscriptionSearchMethod::byAccountID:
+                    $search_method = $this->openBlu->database->real_escape_string($search_method)
+                    $value = (int)$value;
+                    break;
+
+                default:
+                    throw new InvalidSearchMethodException();
+            }
+
+            $Query = QueryBuilder::select('user_subscriptions', [
+                'id', 'account_id', 'subscription_id', 'access_record_id', 'status', 'created_timestamp'
+            ], $search_method, $value);
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == false)
+            {
+                throw new DatabaseException($this->openBlu->database->error, $Query);
+            }
+            else
+            {
+                if($QueryResults->num_rows !== 1)
+                {
+                    throw new VPNNotFoundException();
+                }
+
+                $Row = $QueryResults->fetch_array(MYSQLI_ASSOC);
+                $Row['configuration_parameters'] = json_decode($Row['configuration_parameters'], true);
+                return UserSubscription::fromArray($Row);
+            }
+        }
     }
