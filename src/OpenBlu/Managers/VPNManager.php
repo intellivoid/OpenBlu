@@ -294,6 +294,7 @@
          * Returns the total amount of servers available in the database
          *
          * @return int
+         * @noinspection PhpUnused
          */
         public function totalServers(): int
         {
@@ -312,6 +313,7 @@
          * Returns the current amount of sessions in total
          *
          * @return int
+         * @noinspection PhpUnused
          */
         public function currentSessions(): int
         {
@@ -337,6 +339,7 @@
          * Returns the total amount of sessions in total
          *
          * @return int
+         * @noinspection PhpUnused
          */
         public function totalSessions(): int
         {
@@ -393,6 +396,7 @@
          * @return array
          * @throws DatabaseException
          * @throws PageNotFoundException
+         * @noinspection PhpUnused
          */
         public function getServerPage(int $page): array
         {
@@ -454,6 +458,7 @@
          *
          * @return array
          * @throws DatabaseException
+         * @noinspection PhpUnused
          */
         public function getPopularServers(): array
         {
