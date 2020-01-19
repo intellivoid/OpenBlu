@@ -12,7 +12,6 @@
     use OpenBlu\Exceptions\InvalidOrderByTypeException;
     use OpenBlu\Exceptions\InvalidOrderDirectionException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
-    use OpenBlu\Exceptions\LimitExceedingException;
     use OpenBlu\Exceptions\NoResultsFoundException;
     use OpenBlu\Exceptions\PageNotFoundException;
     use OpenBlu\Exceptions\VPNNotFoundException;

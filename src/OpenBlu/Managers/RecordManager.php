@@ -1,9 +1,6 @@
 <?php
 
     namespace OpenBlu\Managers;
-    use AnalyticsManager\Abstracts\RecordSearchMethod;
-    use AnalyticsManager\Exceptions\RecordAlreadyExistsException as RecordAlreadyExistsExceptionAlias;
-    use AnalyticsManager\Exceptions\RecordNotFoundException;
     use OpenBlu\Exceptions\DatabaseException;
     use OpenBlu\Exceptions\InvalidIPAddressException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
@@ -117,12 +114,9 @@
          * @throws DatabaseException
          * @throws InvalidIPAddressException
          * @throws InvalidSearchMethodException
-         * @throws RecordAlreadyExistsExceptionAlias
-         * @throws RecordNotFoundException
          * @throws SyncException
          * @throws UpdateRecordNotFoundException
          * @throws VPNNotFoundException
-         * @throws \AnalyticsManager\Exceptions\DatabaseException
          */
         public function sync(string $endpoint = "http://www.vpngate.net/api/iphone")
         {
@@ -201,9 +195,6 @@
          * @param string $RecordFile
          * @throws DatabaseException
          * @throws InvalidSearchMethodException
-         * @throws \AnalyticsManager\Exceptions\DatabaseException
-         * @throws RecordAlreadyExistsExceptionAlias
-         * @throws RecordNotFoundException
          * @throws InvalidIPAddressException
          * @throws VPNNotFoundException
          */
@@ -295,14 +286,6 @@
                 fclose($handle);
             }
 
-            if($this->openBlu->getAnalyticsManager()->getManager()->nameExists('vpn_analytics', 'sessions') == false)
-            {
-                $this->openBlu->getAnalyticsManager()->getManager()->createRecord('vpn_analytics', 'sessions');
-            }
-
-            $Record = $this->openBlu->getAnalyticsManager()->getManager()->getRecord('vpn_analytics', RecordSearchMethod::byName, 'sessions');
-            $Record->tally($this->openBlu->getVPNManager()->currentSessions(), false, true);
-            $this->openBlu->getAnalyticsManager()->getManager()->updateRecord('vpn_analytics',  $Record);
 
         }
     }
