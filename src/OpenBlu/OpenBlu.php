@@ -4,7 +4,6 @@
 
     use acm\acm;
     use acm\Objects\Schema;
-    use AnalyticsManager\AnalyticsManager;
     use Exception;
     use mysqli;
     use OpenBlu\Managers\RecordManager;
@@ -48,7 +47,7 @@
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Utilities' . DIRECTORY_SEPARATOR . 'Hashing.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Utilities' . DIRECTORY_SEPARATOR . 'OpenVPNConfiguration.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Utilities' . DIRECTORY_SEPARATOR . 'Validate.php');
-    
+
     if(class_exists('acm\acm') == false)
     {
         include_once(__DIR__ . DIRECTORY_SEPARATOR . 'acm' . DIRECTORY_SEPARATOR . 'acm.php');
@@ -78,10 +77,6 @@
          */
         private $VPNManager;
 
-        /**
-         * @var AnalyticsManager
-         */
-        private $AnalyticsManager;
 
         /**
          * @var acm
@@ -133,7 +128,6 @@
 
             $this->RecordManager = new RecordManager($this);
             $this->VPNManager = new VPNManager($this);
-            $this->AnalyticsManager = new AnalyticsManager($this->DatabaseConfiguration['Name']);
         }
 
         /**
@@ -150,14 +144,6 @@
         public function getVPNManager(): VPNManager
         {
             return $this->VPNManager;
-        }
-
-        /**
-         * @return AnalyticsManager
-         */
-        public function getAnalyticsManager(): AnalyticsManager
-        {
-            return $this->AnalyticsManager;
         }
 
         /**
