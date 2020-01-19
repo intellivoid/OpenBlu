@@ -89,7 +89,7 @@
                     'configuration_parameters' => $ConfigurationParameters,
                     'certificate_authority' => $CertificateAuthority,
                     'certificate' => $Certificate,
-                    'key' => $Key,
+                    '`key`' => $Key,
                     'last_updated' => $LastUpdated,
                     'created' => $Created
                 )
@@ -149,7 +149,7 @@
                 'configuration_parameters',
                 'certificate_authority',
                 'certificate',
-                'key',
+                '`key`',
                 'last_updated',
                 'created'
             ], $searchMethod, $input);
@@ -223,7 +223,7 @@
                 'configuration_parameters' => $ConfigurationParameters,
                 'certificate_authority' => $CertificateAuthority,
                 'certificate' => $Certificate,
-                'key' => $Key,
+                '`key`' => $Key,
                 'last_updated' => $LastUpdated
             ), 'id', $ID);
             $QueryResults = $this->openBlu->database->query($Query);
