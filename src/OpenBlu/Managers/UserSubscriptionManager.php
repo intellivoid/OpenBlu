@@ -41,6 +41,8 @@
          * @param int $access_record_id
          * @return UserSubscription
          * @throws DatabaseException
+         * @throws InvalidSearchMethodException
+         * @throws UserSubscriptionRecordNotFoundException
          */
         public function registerUserSubscription(int $account_id, int $subscription_id, int $access_record_id): UserSubscription
         {
@@ -61,8 +63,7 @@
 
             if($QueryResults == true)
             {
-                // TODO:: Return the user subscription object
-                return null;
+                return $this->getUserSubscription(UserSubscriptionSearchMethod::byAccountID, $account_id);
             }
             else
             {
