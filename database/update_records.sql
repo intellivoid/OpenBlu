@@ -1,9 +1,9 @@
-CREATE TABLE update_records
+create table update_records
 (
-    id INT(255) PRIMARY KEY COMMENT 'The unique ID of the update record (For Database Indexing)' AUTO_INCREMENT,
-    public_id VARCHAR(255) COMMENT 'The Public ID (Unique ID) of the update record',
-    request_time INT(255) COMMENT 'The Unix Timestamp of when this record was created',
-    data MEDIUMTEXT COMMENT 'The data of the update record represented in CSV'
-);
-CREATE UNIQUE INDEX update_records_id_uindex ON update_records (id);
-ALTER TABLE update_records COMMENT = 'Contains a history of Update Records';
+    id           int(255) auto_increment comment 'The unique ID of the update record (For Database Indexing)',
+    public_id    varchar(255) null comment 'The Public ID (Unique ID) of the update record',
+    request_time int(255)     null comment 'The Unix Timestamp of when this record was created',
+    data         mediumtext   null comment 'The data of the update record represented in CSV',
+    constraint update_records_id_uindex unique (id)
+) comment 'Contains a history of Update Records';
+alter table update_records add primary key (id);
