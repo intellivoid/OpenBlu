@@ -87,7 +87,7 @@
                 case UserSubscriptionSearchMethod::bySubscriptionID:
                 case UserSubscriptionSearchMethod::byAccessRecordID:
                 case UserSubscriptionSearchMethod::byAccountID:
-                    $search_method = $this->openBlu->database->real_escape_string($search_method)
+                    $search_method = $this->openBlu->database->real_escape_string($search_method);
                     $value = (int)$value;
                     break;
 
