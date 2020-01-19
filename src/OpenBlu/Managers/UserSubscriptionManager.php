@@ -9,6 +9,7 @@
     use OpenBlu\Abstracts\UserSubscriptionStatus;
     use OpenBlu\Exceptions\DatabaseException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
+    use OpenBlu\Exceptions\UserSubscriptionRecordNotFoundException;
     use OpenBlu\Objects\UserSubscription;
     use OpenBlu\OpenBlu;
 
@@ -69,6 +70,16 @@
             }
         }
 
+        /**
+         * Returns a user subscription record from the database
+         *
+         * @param string $search_method
+         * @param int $value
+         * @return UserSubscription
+         * @throws DatabaseException
+         * @throws InvalidSearchMethodException
+         * @throws UserSubscriptionRecordNotFoundException
+         */
         public function getUserSubscription(string $search_method, int $value): UserSubscription
         {
             switch($search_method)
@@ -97,11 +108,11 @@
             {
                 if($QueryResults->num_rows !== 1)
                 {
-                    throw new VPNNotFoundException();
+                    throw new UserSubscriptionRecordNotFoundException();
                 }
 
                 $Row = $QueryResults->fetch_array(MYSQLI_ASSOC);
-                $Row['configuration_parameters'] = json_decode($Row['configuration_parameters'], true);
+
                 return UserSubscription::fromArray($Row);
             }
         }
