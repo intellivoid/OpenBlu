@@ -1,6 +1,7 @@
 <?php
 
     namespace OpenBlu\Managers;
+    use msqg\QueryBuilder;
     use OpenBlu\Exceptions\DatabaseException;
     use OpenBlu\Exceptions\InvalidIPAddressException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
@@ -48,7 +49,10 @@
             $PublicID = $this->openBlu->database->real_escape_string(Hashing::calculateUpdateRecordPublicID($data));
             $RequestTime = (int)time();
 
-            $Query = "INSERT INTO `update_records` (public_id, request_time) VALUES ('$PublicID', $RequestTime)";
+            $Query = QueryBuilder::insert_into('update_records', array(
+                'public_id' => $PublicID,
+                'request_time' => $RequestTime
+            ));
             $QueryResults = $this->openBlu->database->query($Query);
 
             if($QueryResults == true)
@@ -77,7 +81,7 @@
             {
                 case \OpenBlu\Abstracts\SearchMethods\UpdateRecord::byPublicID:
                     $searchMethod = $this->openBlu->database->real_escape_string($searchMethod);
-                    $input = "\"" . $this->openBlu->database->real_escape_string($input) . "\"";
+                    $input = $this->openBlu->database->real_escape_string($input);
                     break;
 
                 case \OpenBlu\Abstracts\SearchMethods\UpdateRecord::byID:
@@ -89,7 +93,11 @@
                     throw new InvalidSearchMethodException();
             }
 
-            $Query = "SELECT id, public_id, request_time FROM `update_records` WHERE $searchMethod=$input";
+            $Query = QueryBuilder::select('update_records', [
+                'id',
+                'public_id',
+                'request_time'
+            ], $searchMethod, $input);
             $QueryResults = $this->openBlu->database->query($Query);
 
             if($QueryResults == false)
