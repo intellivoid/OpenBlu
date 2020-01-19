@@ -84,6 +84,7 @@
         {
             switch($search_method)
             {
+                case UserSubscriptionSearchMethod::byId:
                 case UserSubscriptionSearchMethod::bySubscriptionID:
                 case UserSubscriptionSearchMethod::byAccessRecordID:
                 case UserSubscriptionSearchMethod::byAccountID:
@@ -114,6 +115,43 @@
                 $Row = $QueryResults->fetch_array(MYSQLI_ASSOC);
 
                 return UserSubscription::fromArray($Row);
+            }
+        }
+
+        /**
+         * Updates an existing user subscription record in the database
+         *
+         * @param UserSubscription $userSubscription
+         * @return bool
+         * @throws DatabaseException
+         * @throws InvalidSearchMethodException
+         * @throws UserSubscriptionRecordNotFoundException
+         */
+        public function updateUserSubscription(UserSubscription $userSubscription): bool
+        {
+            $this->getUserSubscription(UserSubscriptionSearchMethod::byId, $userSubscription->ID);
+
+            $id = (int)$userSubscription->ID;
+            $account_id = (int)$userSubscription->AccountID;
+            $subscription_id = (int)$userSubscription->SubscriptionID;
+            $access_record_id = (int)$userSubscription->AccessRecordID;
+            $status = (int)$userSubscription->Status;
+
+            $Query = QueryBuilder::update('user_subscriptions', array(
+                'account_id' => $account_id,
+                'subscription_id' => $subscription_id,
+                'access_record_id' => $access_record_id,
+                'status' => $status
+            ), 'id', $id);
+            $QueryResults = $this->openBlu->database->query($Query);
+
+            if($QueryResults == true)
+            {
+                return true;
+            }
+            else
+            {
+                throw new DatabaseException($this->openBlu->database->error, $Query);
             }
         }
     }
