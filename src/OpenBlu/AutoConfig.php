@@ -23,8 +23,4 @@
     $RecordDirectorySchema->setDefinition('UNIX_RecordDirectory', '\var\openblu\records');
     $acm->defineSchema('RecordDirectory', $RecordDirectorySchema);
 
-    $ModularApiSchema = new Schema();
-    $ModularApiSchema->setDefinition('IssuerName', 'example');
-    $acm->defineSchema('ModularAPI', $ModularApiSchema);
-
     $acm->processCommandLine();
