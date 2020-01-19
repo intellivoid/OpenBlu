@@ -181,6 +181,7 @@
          * @throws InvalidIPAddressException
          * @throws VPNNotFoundException
          * @throws InvalidSearchMethodException
+         * @noinspection DuplicatedCode
          */
         public function updateVPN(VPN $vpn): bool
         {
@@ -210,7 +211,21 @@
             $Certificate = $this->openBlu->database->real_escape_string($vpn->Certificate);
             $Key = $this->openBlu->database->real_escape_string($vpn->Key);
 
-            $Query = "UPDATE `vpns` SET host_name='$HostName', ip_address='$IPAddress', score=$Score, ping=$Ping, country='$Country', country_short='$CountryShort', sessions=$Sessions, total_sessions=$TotalSessions, configuration_parameters='$ConfigurationParameters', certificate_authority='$CertificateAuthority', certificate='$Certificate', `key`='$Key', last_updated=$LastUpdated WHERE id=$ID";
+            $Query = QueryBuilder::update('vpns', array(
+                'host_name' => $HostName,
+                'ip_address' => $IPAddress,
+                'score' => $Score,
+                'ping' => $Ping,
+                'country' => $Country,
+                'country_short' => $CountryShort,
+                'sessions' => $Sessions,
+                'total_sessions' => $TotalSessions,
+                'configuration_parameters' => $ConfigurationParameters,
+                'certificate_authority' => $CertificateAuthority,
+                'certificate' => $Certificate,
+                'key' => $Key,
+                'last_updated' => $LastUpdated
+            ), 'id', $ID);
             $QueryResults = $this->openBlu->database->query($Query);
 
             if($QueryResults == true)
