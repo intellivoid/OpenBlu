@@ -66,4 +66,5 @@
                 throw new DatabaseException($this->openBlu->database->error, $Query);
             }
         }
+
     }
