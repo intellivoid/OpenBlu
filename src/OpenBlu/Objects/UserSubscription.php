@@ -38,6 +38,13 @@
         public $AccessRecordID;
 
         /**
+         * The status of the User Subscription
+         *
+         * @var int
+         */
+        public $Status;
+
+        /**
          * The Unix Timestamp of this User Subscription
          *
          * @var int
@@ -56,6 +63,7 @@
                 'account_id' => (int)$this->AccountID,
                 'subscription_id' => (int)$this->SubscriptionID,
                 'access_record_id' => (int)$this->AccessRecordID,
+                'status' => (int)$this->Status,
                 'created_timestamp' => (int)$this->CreatedTimestamp
             );
         }
@@ -88,6 +96,11 @@
             if(isset($data['access_record_id']))
             {
                 $UserSubscriptionObject->CreatedTimestamp = (int)$data['access_record_id'];
+            }
+
+            if(isset($data['status']))
+            {
+                $UserSubscriptionObject->Status = (int)$data['status'];
             }
 
             if(isset($data['created_timestamp']))
