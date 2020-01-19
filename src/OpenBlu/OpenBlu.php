@@ -7,6 +7,7 @@
     use Exception;
     use mysqli;
     use OpenBlu\Managers\RecordManager;
+    use OpenBlu\Managers\UserSubscriptionManager;
     use OpenBlu\Managers\VPNManager;
 
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Abstracts' . DIRECTORY_SEPARATOR . 'SearchMethods' . DIRECTORY_SEPARATOR . 'UpdateRecord.php');
@@ -33,6 +34,7 @@
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Exceptions' . DIRECTORY_SEPARATOR . 'VPNNotFoundException.php');
 
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'RecordManager.php');
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'UserSubscriptionManager.php');
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Managers' . DIRECTORY_SEPARATOR . 'VPNManager.php');
 
     include_once(__DIR__ . DIRECTORY_SEPARATOR . 'Objects' . DIRECTORY_SEPARATOR . 'UpdateRecord.php');
@@ -89,6 +91,11 @@
         private $RecordDirectoryConfiguration;
 
         /**
+         * @var UserSubscriptionManager
+         */
+        private $UserSubscriptionManager;
+
+        /**
          * OpenBlu constructor.
          * @throws Exception
          */
@@ -122,6 +129,7 @@
             );
 
             $this->RecordManager = new RecordManager($this);
+            $this->UserSubscriptionManager = new UserSubscriptionManager($this);
             $this->VPNManager = new VPNManager($this);
         }
 
@@ -172,5 +180,13 @@
         public function getAcm(): acm
         {
             return $this->acm;
+        }
+
+        /**
+         * @return UserSubscriptionManager
+         */
+        public function getUserSubscriptionManager(): UserSubscriptionManager
+        {
+            return $this->UserSubscriptionManager;
         }
     }
