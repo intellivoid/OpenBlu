@@ -73,7 +73,6 @@
          */
         private $VPNManager;
 
-
         /**
          * @var acm
          */
