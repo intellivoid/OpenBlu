@@ -22,10 +22,7 @@ ALTER TABLE `update_records`
 --
 ALTER TABLE `user_subscriptions`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `user_subscriptions_id_uindex` (`id`),
-  ADD KEY `user_subscriptions_access_records_id_fk` (`access_record_id`),
-  ADD KEY `user_subscriptions_subscriptions_id_fk` (`subscription_id`),
-  ADD KEY `user_subscriptions_users_id_fk` (`account_id`);
+  ADD UNIQUE KEY `user_subscriptions_id_uindex` (`id`);
 
 --
 -- Indexes for table `vpns`
@@ -61,15 +58,3 @@ ALTER TABLE `user_subscriptions`
 --
 ALTER TABLE `vpns`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT COMMENT 'The unique ID of the VPN (Database Indexing)';
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `user_subscriptions`
---
-ALTER TABLE `user_subscriptions`
-  ADD CONSTRAINT `user_subscriptions_access_records_id_fk` FOREIGN KEY (`access_record_id`) REFERENCES `intellivoid_api`.`access_records` (`id`),
-  ADD CONSTRAINT `user_subscriptions_subscriptions_id_fk` FOREIGN KEY (`subscription_id`) REFERENCES `intellivoid`.`subscriptions` (`id`),
-  ADD CONSTRAINT `user_subscriptions_users_id_fk` FOREIGN KEY (`account_id`) REFERENCES `intellivoid`.`users` (`id`);
