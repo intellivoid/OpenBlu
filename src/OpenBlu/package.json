@@ -17,7 +17,7 @@
             "main": {
                 "execution_point": "sync.php",
                 "create_symlink": true,
-                "name": "openblu"
+                "name": "sync_openblu"
             },
             "post_installation": [],
             "pre_installation": []
