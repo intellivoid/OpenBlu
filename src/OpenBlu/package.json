@@ -1,0 +1,186 @@
+{
+    "package": {
+        "package_name": "net.intellivoid.openblu",
+        "name": "OpenBlu",
+        "version": "1.0.2.3",
+        "author": "Zi Xing Narrakas",
+        "organization": "Intellivoid",
+        "description": "Manages and syncs OpenBlu VPN servers",
+        "url": "https://github.com/intellivoid/openblu",
+        "dependencies": [
+            {"package": "net.intellivoid.acm", "version": "latest", "required": true},
+            {"package": "net.intellivoid.msqg", "version": "latest", "required": true},
+            {"package": "net.intellivoid.deepanalytics", "version": "latest", "required": true}
+        ],
+        "configuration": {
+            "autoload_method": "indexed",
+            "main": {
+                "execution_point": "sync.php",
+                "create_symlink": true,
+                "name": "openblu"
+            },
+            "post_installation": [],
+            "pre_installation": []
+        }
+    },
+    "components": [
+        {
+            "required": true,
+            "file": "Abstracts/DefaultValues.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/ExceptionCodes.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/FilterType.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/OrderBy.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/OrderDirection.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/SearchMethods/UpdateRecord.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/SearchMethods/UserSubscriptionSearchMethod.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/SearchMethods/VPN.php"
+        },
+        {
+            "required": true,
+            "file": "Abstracts/UserSubscriptionStatus.php"
+        },
+        {
+            "required": true,
+            "file": "AutoConfig.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/ConfigurationNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/DatabaseException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidFilterTypeException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidFilterValueException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidIPAddressException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidOrderByTypeException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidOrderDirectionException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidSearchMethodException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/NoResultsFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/PageNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/SyncException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/UpdateRecordNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/UserSubscriptionRecordNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/VPNNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/RecordManager.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/UserSubscriptionManager.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/VPNManager.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/UpdateRecord.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/UserSubscription.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/VPN.php"
+        },
+        {
+            "required": true,
+            "file": "OpenBlu.php"
+        },
+        {
+            "required": true,
+            "file": "sync.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/Corrector.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/Hashing.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/OpenVPNConfiguration.php"
+        },
+        {
+            "required": true,
+            "file": "Utilities/Validate.php"
+        }
+    ],
+    "files": [
+        "configuration.ini",
+        "openblu.json",
+        "Resources/configuration_header.txt",
+        "Resources/docs_certificate.txt",
+        "Resources/docs_certificate_authority.txt",
+        "Resources/docs_dev.txt",
+        "Resources/docs_encryption.txt",
+        "Resources/docs_proto.txt",
+        "Resources/docs_proxy.txt",
+        "Resources/docs_remote.txt",
+        "Resources/other_parameters.txt",
+        "Resources/vpn_information.txt"
+    ]
+}

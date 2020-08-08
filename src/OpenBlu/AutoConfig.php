@@ -3,9 +3,13 @@
     use acm\acm;
     use acm\Objects\Schema;
 
-    if(class_exists('acm\acm') == false)
+    if(defined("PPM") == false)
     {
-        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'acm' . DIRECTORY_SEPARATOR . 'acm.php');
+        if(class_exists('acm\acm') == false)
+        {
+            /** @noinspection PhpIncludeInspection */
+            include_once(__DIR__ . DIRECTORY_SEPARATOR . 'acm' . DIRECTORY_SEPARATOR . 'acm.php');
+        }
     }
 
     $acm = new acm(__DIR__, 'OpenBlu');
