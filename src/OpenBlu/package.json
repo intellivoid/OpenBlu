@@ -13,7 +13,7 @@
             {"package": "net.intellivoid.deepanalytics", "version": "latest", "required": true}
         ],
         "configuration": {
-            "autoload_method": "indexed",
+            "autoload_method": "generated_spl",
             "main": {
                 "execution_point": "sync.php",
                 "create_symlink": true,
