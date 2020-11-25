@@ -2,7 +2,7 @@
     "package": {
         "package_name": "net.intellivoid.openblu",
         "name": "OpenBlu",
-        "version": "1.0.2.3",
+        "version": "1.0.2.4",
         "author": "Zi Xing Narrakas",
         "organization": "Intellivoid",
         "description": "Manages and syncs OpenBlu VPN servers",
@@ -14,11 +14,6 @@
         ],
         "configuration": {
             "autoload_method": "generated_spl",
-            "main": {
-                "execution_point": "sync.php",
-                "create_symlink": true,
-                "name": "sync_openblu"
-            },
             "post_installation": [],
             "pre_installation": []
         }
@@ -147,10 +142,6 @@
         {
             "required": true,
             "file": "OpenBlu.php"
-        },
-        {
-            "required": true,
-            "file": "sync.php"
         },
         {
             "required": true,
