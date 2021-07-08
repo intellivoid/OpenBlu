@@ -8,12 +8,28 @@
         "description": "Manages and syncs OpenBlu VPN servers",
         "url": "https://github.com/intellivoid/openblu",
         "dependencies": [
-            {"package": "net.intellivoid.acm", "version": "latest", "required": true, "source": "default@github/intellivoid/acm"},
-            {"package": "net.intellivoid.msqg", "version": "latest", "required": true, "source": "default@github/intellivoid/msqg"},
-            {"package": "net.intellivoid.deepanalytics", "version": "latest", "required": true, "source": "default@github/intellivoid/DeepAnalytics"}
+            {
+                "package": "net.intellivoid.acm",
+                "version": "latest",
+                "source": "default@github/intellivoid/acm",
+                "required": true
+            },
+            {
+                "package": "net.intellivoid.msqg",
+                "version": "latest",
+                "source": "default@github/intellivoid/msqg",
+                "required": true
+            },
+            {
+                "package": "net.intellivoid.deepanalytics",
+                "version": "latest",
+                "source": "default@github/intellivoid/DeepAnalytics",
+                "required": true
+            }
         ],
         "configuration": {
             "autoload_method": "generated_spl",
+            "main": null,
             "post_installation": [],
             "pre_installation": []
         }
@@ -21,27 +37,15 @@
     "components": [
         {
             "required": true,
-            "file": "Abstracts/DefaultValues.php"
-        },
-        {
-            "required": true,
             "file": "Abstracts/ExceptionCodes.php"
         },
         {
             "required": true,
-            "file": "Abstracts/FilterType.php"
+            "file": "Abstracts/UserSubscriptionStatus.php"
         },
         {
             "required": true,
-            "file": "Abstracts/OrderBy.php"
-        },
-        {
-            "required": true,
-            "file": "Abstracts/OrderDirection.php"
-        },
-        {
-            "required": true,
-            "file": "Abstracts/SearchMethods/UpdateRecord.php"
+            "file": "Abstracts/DefaultValues.php"
         },
         {
             "required": true,
@@ -53,59 +57,23 @@
         },
         {
             "required": true,
-            "file": "Abstracts/UserSubscriptionStatus.php"
+            "file": "Abstracts/SearchMethods/UpdateRecord.php"
         },
         {
             "required": true,
-            "file": "AutoConfig.php"
+            "file": "Abstracts/OrderDirection.php"
         },
         {
             "required": true,
-            "file": "Exceptions/ConfigurationNotFoundException.php"
+            "file": "Abstracts/FilterType.php"
         },
         {
             "required": true,
-            "file": "Exceptions/DatabaseException.php"
+            "file": "Abstracts/OrderBy.php"
         },
         {
             "required": true,
-            "file": "Exceptions/InvalidFilterTypeException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/InvalidFilterValueException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/InvalidIPAddressException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/InvalidOrderByTypeException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/InvalidOrderDirectionException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/InvalidSearchMethodException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/NoResultsFoundException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/PageNotFoundException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/SyncException.php"
-        },
-        {
-            "required": true,
-            "file": "Exceptions/UpdateRecordNotFoundException.php"
+            "file": "OpenBlu.php"
         },
         {
             "required": true,
@@ -113,35 +81,63 @@
         },
         {
             "required": true,
+            "file": "Exceptions/SyncException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/DatabaseException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/NoResultsFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidFilterValueException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/UpdateRecordNotFoundException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidOrderDirectionException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidOrderByTypeException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidIPAddressException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/InvalidSearchMethodException.php"
+        },
+        {
+            "required": true,
             "file": "Exceptions/VPNNotFoundException.php"
         },
         {
             "required": true,
-            "file": "Managers/RecordManager.php"
+            "file": "Exceptions/PageNotFoundException.php"
         },
         {
             "required": true,
-            "file": "Managers/UserSubscriptionManager.php"
+            "file": "Exceptions/InvalidFilterTypeException.php"
         },
         {
             "required": true,
-            "file": "Managers/VPNManager.php"
+            "file": "Exceptions/ConfigurationNotFoundException.php"
         },
         {
             "required": true,
-            "file": "Objects/UpdateRecord.php"
+            "file": "Utilities/OpenVPNConfiguration.php"
         },
         {
             "required": true,
-            "file": "Objects/UserSubscription.php"
-        },
-        {
-            "required": true,
-            "file": "Objects/VPN.php"
-        },
-        {
-            "required": true,
-            "file": "OpenBlu.php"
+            "file": "Utilities/Validate.php"
         },
         {
             "required": true,
@@ -153,25 +149,46 @@
         },
         {
             "required": true,
-            "file": "Utilities/OpenVPNConfiguration.php"
+            "file": "AutoConfig.php"
         },
         {
             "required": true,
-            "file": "Utilities/Validate.php"
+            "file": "Objects/UserSubscription.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/VPN.php"
+        },
+        {
+            "required": true,
+            "file": "Objects/UpdateRecord.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/RecordManager.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/VPNManager.php"
+        },
+        {
+            "required": true,
+            "file": "Managers/UserSubscriptionManager.php"
         }
     ],
     "files": [
-        "configuration.ini",
         "openblu.json",
-        "Resources/configuration_header.txt",
-        "Resources/docs_certificate.txt",
-        "Resources/docs_certificate_authority.txt",
-        "Resources/docs_dev.txt",
-        "Resources/docs_encryption.txt",
-        "Resources/docs_proto.txt",
-        "Resources/docs_proxy.txt",
-        "Resources/docs_remote.txt",
-        "Resources/other_parameters.txt",
-        "Resources/vpn_information.txt"
+        "package.json",
+        "configuration.ini",
+        "Resources/openvpn/vpn_information.txt",
+        "Resources/openvpn/other_parameters.txt",
+        "Resources/openvpn/docs_certificate.txt",
+        "Resources/openvpn/docs_encryption.txt",
+        "Resources/openvpn/docs_certificate_authority.txt",
+        "Resources/openvpn/docs_remote.txt",
+        "Resources/openvpn/configuration_header.txt",
+        "Resources/openvpn/docs_proto.txt",
+        "Resources/openvpn/docs_proxy.txt",
+        "Resources/openvpn/docs_dev.txt"
     ]
 }
