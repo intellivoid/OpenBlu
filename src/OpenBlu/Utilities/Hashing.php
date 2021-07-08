@@ -16,7 +16,7 @@
          */
         public static function calculateUpdateRecordPublicID(string $data): string
         {
-            return hash('whirlpool', $data);
+            return hash('sha256', $data);
         }
 
         /**

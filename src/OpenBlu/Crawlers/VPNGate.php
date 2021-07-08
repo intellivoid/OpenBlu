@@ -4,18 +4,23 @@
     namespace OpenBlu\Crawlers;
 
 
+    use Exception;
+    use Objects\CrawlError;
     use OpenBlu\Abstracts\SearchMethods\UpdateRecord;
+    use OpenBlu\Abstracts\Types\ResultObjectType;
     use OpenBlu\Exceptions\DatabaseException;
-    use OpenBlu\Exceptions\InvalidIPAddressException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
     use OpenBlu\Exceptions\SyncException;
     use OpenBlu\Exceptions\UpdateRecordNotFoundException;
-    use OpenBlu\Exceptions\VPNNotFoundException;
+    use OpenBlu\Interfaces\CrawlerInterface;
+    use OpenBlu\Objects\CrawlResults;
     use OpenBlu\Objects\VPN;
     use OpenBlu\OpenBlu;
+    use OpenBlu\Utilities\Converter;
     use OpenBlu\Utilities\Corrector;
     use OpenBlu\Utilities\Hashing;
     use OpenBlu\Utilities\OpenVPNConfiguration;
+    use VerboseAdventure\Abstracts\EventType;
 
     /**
      * Class VPNGate
@@ -25,105 +30,107 @@
      *
      * @package OpenBlu\Crawlers
      */
-    class VPNGate
+    class VPNGate implements CrawlerInterface
     {
         /**
-         * @var OpenBlu
+         * @var string
          */
-        private $openBlu;
+        private string $SourceName = "VPNGate";
 
         /**
-         * VPNGate constructor.
-         * @param OpenBlu $openBlu
+         * @var string
          */
-        public function __construct(OpenBlu $openBlu)
-        {
-            $this->openBlu = $openBlu;
-        }
+        private string $SourceURL = "http://www.vpngate.net/api/iphone";
 
         /**
          * Syncs the database with updated information
          *
-         * @param string $endpoint
-         * @param bool $cli_logging
+         * @param OpenBlu $openBlu
+         * @return CrawlResults
          * @throws DatabaseException
-         * @throws InvalidIPAddressException
          * @throws InvalidSearchMethodException
          * @throws SyncException
-         * @throws VPNNotFoundException
          * @throws UpdateRecordNotFoundException
-         * @noinspection HttpUrlsUsage
          */
-        public function scrape(string $endpoint = "http://www.vpngate.net/api/iphone", bool $cli_logging=False)
+        public function crawl(OpenBlu $openBlu): CrawlResults
         {
+            $CrawlResults = new CrawlResults();
+            $CrawlResults->SourceName = $this->SourceName;
+            $CrawlResults->TimestampBegin = time();
+
+            $openBlu->getLog()->log(EventType::INFO, "Crawling VPNGate started", $this->SourceName);
+
             // Get cURL resource
             $curl = curl_init();
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
-            curl_setopt($curl, CURLOPT_URL, $endpoint);
-            curl_setopt($curl, CURLOPT_USERAGENT, 'OpenBlu/2.0 (Library)');
+            curl_setopt($curl, CURLOPT_URL, $this->SourceURL);
+            curl_setopt($curl, CURLOPT_USERAGENT, 'OpenBlu/2.0 (Crawler)');
             curl_setopt($curl, CURLOPT_FAILONERROR, true);
 
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
-                CURLOPT_URL => $endpoint,
-                CURLOPT_USERAGENT => 'OpenBlu/2.0 (Library)'
+                CURLOPT_URL => $this->SourceURL,
+                CURLOPT_USERAGENT => 'OpenBlu/2.0 (Crawler)'
             ));
 
-            if($cli_logging){ print("Making HTTP request to Gateway ..." . PHP_EOL); }
+            $openBlu->getLog()->log(EventType::INFO, "Making HTTP Request to Gateway", $this->SourceName);
             $Response = curl_exec($curl);
             $Error = curl_error($curl);
             curl_close($curl);
-            if($cli_logging){ print("HTTP Connection closed" . PHP_EOL); }
+            $openBlu->getLog()->log(EventType::INFO, "HTTP Connection Closed", $this->SourceName);
 
             if($Error)
             {
-                if($cli_logging){ print("HTTP Error: " . $Error . PHP_EOL); }
-                throw new SyncException($Error);
+                // TODO: Convert to a crawler exception
+                $syncException = new SyncException($Error);
+                $openBlu->getLog()->log(EventType::ERROR, "HTTP Error: " . $Error, $this->SourceName);
+                $openBlu->getLog()->logException($syncException, $this->SourceName);
+
+                throw $syncException;
             }
 
             $PublicID = Hashing::calculateUpdateRecordPublicID($Response);
-            $RecordFile = $this->writeRecordFile($PublicID, $Response);
+            $RecordFile = $this->writeRecordFile($openBlu->getRecordDirectoryConfiguration()['TemporaryDirectory'], $PublicID, $Response);
 
-            if($cli_logging){ print("Record ID: " . $PublicID . PHP_EOL); }
-            if($cli_logging){ print("Record File: " . $RecordFile . PHP_EOL); }
+            $openBlu->getLog()->log(EventType::VERBOSE, "Record Hash: $PublicID", $this->SourceName);
+            $openBlu->getLog()->log(EventType::VERBOSE, "Record File: $RecordFile", $this->SourceName);
 
             try
             {
-                $this->openBlu->getRecordManager()->getRecord(UpdateRecord::byPublicID, $PublicID);
+                $openBlu->getRecordManager()->getRecord(UpdateRecord::byPublicID, $PublicID);
                 //return;
             }
             catch(UpdateRecordNotFoundException)
             {
-                $this->openBlu->getRecordManager()->createRecord($Response);
+                $openBlu->getRecordManager()->createRecord($Response);
             }
 
-            if($cli_logging){ print("Importing CSV File to Database" . PHP_EOL); }
-            $this->importCSV($RecordFile, $cli_logging);
+            $openBlu->getLog()->log(EventType::INFO, "Importing CSV to Database", $this->SourceName);
+
+            $CrawlResults = $this->importCSV($openBlu, $CrawlResults, $RecordFile);
+            $CrawlResults->TimestampEnd = time();
+            $CrawlResults->updateValues();
+
+            $openBlu->getLog()->log(EventType::INFO, "Crawling VPNGate ended", $this->SourceName);
+
+            return $CrawlResults;
         }
 
         /**
          * Writes the record file to disk
          *
-         * @param string $publicID
+         * @param string $location
+         * @param string $publicId
          * @param string $data
          * @return string
          */
-        private function writeRecordFile(string $publicID, string $data): string
+        private function writeRecordFile(string $location, string $publicId, string $data): string
         {
-            if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
-            {
-                $RecordFile = $this->openBlu->getRecordDirectoryConfiguration()['WIN_RecordDirectory'] . DIRECTORY_SEPARATOR . $publicID . '.csv';
-            }
-            else
-            {
-                $RecordFile = $this->openBlu->getRecordDirectoryConfiguration()['UNIX_RecordDirectory'] . DIRECTORY_SEPARATOR . $publicID . '.csv';
-            }
+            $RecordFile = $location . DIRECTORY_SEPARATOR . $publicId . '.csv';
 
             if(file_exists($RecordFile) == false)
-            {
                 file_put_contents($RecordFile, $data);
-            }
 
             return $RecordFile;
         }
@@ -131,16 +138,14 @@
         /**
          * Imports contents of a CSV file to the database
          *
-         * @param string $RecordFile
-         * @param bool $cli_logging
-         * @throws DatabaseException
-         * @throws InvalidIPAddressException
-         * @throws InvalidSearchMethodException
-         * @throws VPNNotFoundException
+         * @param OpenBlu $openBlu
+         * @param CrawlResults $crawlResults
+         * @param string $recordFile
+         * @return CrawlResults
          */
-        private function importCSV(string $RecordFile, bool $cli_logging=False)
+        private function importCSV(OpenBlu $openBlu, CrawlResults $crawlResults, string $recordFile): CrawlResults
         {
-            if(($handle = fopen($RecordFile, 'r')) !== false)
+            if(($handle = fopen($recordFile, 'r')) !== false)
             {
                 $LineCounter = 0;
 
@@ -149,7 +154,6 @@
                 {
                     if($LineCounter > 1)
                     {
-                        if($cli_logging){ print("Processing line " . $LineCounter . PHP_EOL); }
                         if(isset($data[0]) == false)
                         {
                             continue;
@@ -217,19 +221,54 @@
                                 $VPNObject->Country = 'N/A';
                             }
 
-                            if($cli_logging){ print("Processing server " . $VPNObject->IP . ' (' . $VPNObject->HostName . ')' . PHP_EOL); }
+                            $openBlu->getLog()->log(EventType::VERBOSE, "Processing server " . $VPNObject->IP . " (" . $VPNObject->HostName . ")", $this->SourceName);
 
-                            $this->openBlu->getVPNManager()->syncVPN($VPNObject);
+                            try
+                            {
+                                $openBlu->getVPNManager()->syncVPN($VPNObject);
+                                $crawlResults->Results[] = $VPNObject->toArray();
+                            }
+                            catch(Exception $e)
+                            {
+                                $CrawlError = new CrawlError();
+                                $CrawlError->Message = "There was an error while trying to import the object into the database";
+                                $CrawlError->ExceptionRepresentation = Converter::exceptionToArray($e);
+                                $CrawlError->Details = $e->getMessage();
+                                $openBlu->getLog()->log(EventType::WARNING, "There was an error while trying to process " . $VPNObject->IP, $this->SourceName);
+
+                                $crawlResults->Errors[] = $CrawlError->toArray();
+                            }
                         }
                     }
 
                     unset($data);
                     $LineCounter += 1;
                 }
-                if($cli_logging){ print("File imported successfully" . PHP_EOL); }
+
                 fclose($handle);
+                $openBlu->getLog()->log(EventType::INFO, "File imported successfully", $this->SourceName);
+
+                $openBlu->getLog()->log(EventType::INFO, "Deleting '$recordFile'", $this->SourceName);
+                unlink($recordFile);
             }
 
+            $crawlResults->ResultObjectType = ResultObjectType::OpenVpnRecord;
+            return $crawlResults;
+        }
 
+        /**
+         * @return string
+         */
+        public function getSourceName(): string
+        {
+            return $this->SourceName;
+        }
+
+        /**
+         * @return string
+         */
+        public function getSourceURL(): string
+        {
+            return $this->SourceURL;
         }
     }

@@ -12,8 +12,9 @@
     use OpenBlu\Managers\RecordManager;
     use OpenBlu\Managers\UserSubscriptionManager;
     use OpenBlu\Managers\VPNManager;
+    use VerboseAdventure\VerboseAdventure;
 
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . 'AutoConfig.php');
+    include_once(__DIR__ . DIRECTORY_SEPARATOR . "AutoConfig.php");
 
     /**
      * Class OpenBlu
@@ -63,43 +64,47 @@
         private $DeepAnalytics;
 
         /**
+         * @var VerboseAdventure
+         */
+        private VerboseAdventure $Log;
+
+        /**
          * OpenBlu constructor.
          * @throws Exception
          */
         public function __construct()
         {
-            $this->acm = new acm(__DIR__, 'OpenBlu');
+            $this->acm = new acm(__DIR__, "OpenBlu");
 
             $DatabaseSchema = new Schema();
-            $DatabaseSchema->setDefinition('Host', 'localhost');
-            $DatabaseSchema->setDefinition('Port', '3306');
-            $DatabaseSchema->setDefinition('Username', 'root');
-            $DatabaseSchema->setDefinition('Password', '');
-            $DatabaseSchema->setDefinition('Name', 'openblu');
+            $DatabaseSchema->setDefinition("Host", "localhost");
+            $DatabaseSchema->setDefinition("Port", "3306");
+            $DatabaseSchema->setDefinition("Username", "root");
+            $DatabaseSchema->setDefinition("Password", "");
+            $DatabaseSchema->setDefinition("Name", "openblu");
 
             $RecordDirectorySchema = new Schema();
-            $RecordDirectorySchema->setDefinition('WIN_RecordDirectory', 'c:\openblu\records');
-            $RecordDirectorySchema->setDefinition('UNIX_RecordDirectory', '\var\openblu\records');
+            $RecordDirectorySchema->setDefinition("TemporaryDirectory", "/tmp");
 
-            $this->acm->defineSchema('Database', $DatabaseSchema);
-            $this->acm->defineSchema('RecordDirectory', $RecordDirectorySchema);
+            $this->acm->defineSchema("Database", $DatabaseSchema);
+            $this->acm->defineSchema("RecordDirectory", $RecordDirectorySchema);
 
-            $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
-            $this->RecordDirectoryConfiguration = $this->acm->getConfiguration('RecordDirectory');
+            $this->DatabaseConfiguration = $this->acm->getConfiguration("Database");
+            $this->RecordDirectoryConfiguration = $this->acm->getConfiguration("RecordDirectory");
 
             $this->Database = new mysqli(
-                $this->DatabaseConfiguration['Host'],
-                $this->DatabaseConfiguration['Username'],
-                $this->DatabaseConfiguration['Password'],
-                $this->DatabaseConfiguration['Name'],
-                $this->DatabaseConfiguration['Port']
+                $this->DatabaseConfiguration["Host"],
+                $this->DatabaseConfiguration["Username"],
+                $this->DatabaseConfiguration["Password"],
+                $this->DatabaseConfiguration["Name"],
+                $this->DatabaseConfiguration["Port"]
             );
 
             $this->RecordManager = new RecordManager($this);
             $this->UserSubscriptionManager = new UserSubscriptionManager($this);
             $this->VPNManager = new VPNManager($this);
-
             $this->DeepAnalytics = new DeepAnalytics();
+            $this->Log = new VerboseAdventure("OpenBlu");
         }
 
         /**
@@ -124,7 +129,7 @@
          */
         public static function getResource(string $file): string
         {
-            return(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'Resources' . DIRECTORY_SEPARATOR . $file));
+            return(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . "Resources" . DIRECTORY_SEPARATOR . $file));
         }
 
         /**
@@ -175,5 +180,13 @@
         public function getDatabase(): mysqli
         {
             return $this->Database;
+        }
+
+        /**
+         * @return VerboseAdventure
+         */
+        public function getLog(): VerboseAdventure
+        {
+            return $this->Log;
         }
     }

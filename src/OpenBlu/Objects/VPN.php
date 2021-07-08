@@ -307,6 +307,8 @@ namespace OpenBlu\Objects;
             return $VPNObject;
         }
 
+        // TODO: Add the ability to generate UDP configurations
+
         /**
          * Creates a configuration file (.ovpn)
          *
