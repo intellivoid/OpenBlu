@@ -69,23 +69,23 @@
         {
             $parameters = [];
 
-            foreach($parametersExploded = explode("\r\n", $data) as $line)
+            foreach(explode("\r\n", $data) as $line)
             {
-                $paramerter = explode(' ', $line);
-                if(isset($paramerter[1]))
+                $parameter = explode(' ', $line);
+                if(isset($parameter[1]))
                 {
-                    if(isset($paramerter[2]))
+                    if(isset($parameter[2]))
                     {
-                        $parameters[$paramerter[0]] = $paramerter[1] . ' ' . $paramerter[2];
+                        $parameters[$parameter[0]] = $parameter[1] . ' ' . $parameter[2];
                     }
                     else
                     {
-                        $parameters[$paramerter[0]] = $paramerter[1];
+                        $parameters[$parameter[0]] = $parameter[1];
                     }
                 }
                 else
                 {
-                    $parameters[$paramerter[0]] = null;
+                    $parameters[$parameter[0]] = null;
                 }
             }
 

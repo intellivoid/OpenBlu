@@ -1,7 +1,10 @@
 <?php
 
+    /** @noinspection PhpMissingFieldTypeInspection */
+
     namespace OpenBlu\Managers;
 
+    use msqg\Abstracts\SortBy;
     use msqg\QueryBuilder;
     use OpenBlu\Abstracts\FilterType;
     use OpenBlu\Abstracts\OrderBy;
@@ -30,15 +33,15 @@
         /**
          * @var OpenBlu
          */
-        private $openBlu;
+        private $OpenBlu;
 
         /**
          * VPNManager constructor.
-         * @param OpenBlu $openBlu
+         * @param OpenBlu $OpenBlu
          */
-        public function __construct(OpenBlu $openBlu)
+        public function __construct(OpenBlu $OpenBlu)
         {
-            $this->openBlu = $openBlu;
+            $this->OpenBlu = $OpenBlu;
         }
 
         /**
@@ -57,23 +60,23 @@
                 throw new InvalidIPAddressException();
             }
 
-            $PublicID = $this->openBlu->database->real_escape_string(Hashing::calculateVPNPublicID($vpn->IP));
-            $HostName = $this->openBlu->database->real_escape_string($vpn->HostName);
-            $IPAddress = $this->openBlu->database->real_escape_string($vpn->IP);
-            $Score = (int)$vpn->Score;
-            $Ping = (int)$vpn->Ping;
-            $Country = $this->openBlu->database->real_escape_string($vpn->Country);
-            $CountryShort = $this->openBlu->database->real_escape_string($vpn->CountryShort);
-            $Sessions = (int)$vpn->Sessions;
-            $TotalSessions = (int)$vpn->TotalSessions;
+            $PublicID = $this->OpenBlu->getDatabase()->real_escape_string(Hashing::calculateVPNPublicID($vpn->IP));
+            $HostName = $this->OpenBlu->getDatabase()->real_escape_string($vpn->HostName);
+            $IPAddress = $this->OpenBlu->getDatabase()->real_escape_string($vpn->IP);
+            $Score = $vpn->Score;
+            $Ping = $vpn->Ping;
+            $Country = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Country);
+            $CountryShort = $this->OpenBlu->getDatabase()->real_escape_string($vpn->CountryShort);
+            $Sessions = $vpn->Sessions;
+            $TotalSessions = $vpn->TotalSessions;
 
-            $Created = (int)time();
-            $LastUpdated = (int)time();
+            $Created = time();
+            $LastUpdated = time();
 
-            $ConfigurationParameters = $this->openBlu->database->real_escape_string(json_encode($vpn->ConfigurationParameters));
-            $CertificateAuthority = $this->openBlu->database->real_escape_string($vpn->CertificateAuthority);
-            $Certificate = $this->openBlu->database->real_escape_string($vpn->Certificate);
-            $Key = $this->openBlu->database->real_escape_string($vpn->Key);
+            $ConfigurationParameters = $this->OpenBlu->getDatabase()->real_escape_string(json_encode($vpn->ConfigurationParameters));
+            $CertificateAuthority = $this->OpenBlu->getDatabase()->real_escape_string($vpn->CertificateAuthority);
+            $Certificate = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Certificate);
+            $Key = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Key);
 
             $Query = QueryBuilder::insert_into(
                 'vpns', array(
@@ -94,16 +97,16 @@
                     'created' => $Created
                 )
             );
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == true)
             {
-                $this->openBlu->getDeepAnalytics()->tally('openblu', 'registered_servers', 0);
+                $this->OpenBlu->getDeepAnalytics()->tally('openblu', 'registered_servers', 0);
                 return true;
             }
             else
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
         }
 
@@ -111,7 +114,7 @@
          * Gets an existing VPN from the Database
          *
          * @param string $searchMethod
-         * @param string|\OpenBlu\Abstracts\SearchMethods\VPN $input
+         * @param string $input
          * @return VPN
          * @throws DatabaseException
          * @throws InvalidSearchMethodException
@@ -123,12 +126,12 @@
             {
                 case \OpenBlu\Abstracts\SearchMethods\VPN::byIP:
                 case \OpenBlu\Abstracts\SearchMethods\VPN::byPublicID:
-                    $searchMethod = $this->openBlu->database->real_escape_string($searchMethod);
-                    $input = $this->openBlu->database->real_escape_string($input);
+                    $searchMethod = $this->OpenBlu->getDatabase()->real_escape_string($searchMethod);
+                    $input = $this->OpenBlu->getDatabase()->real_escape_string($input);
                     break;
 
                 case \OpenBlu\Abstracts\SearchMethods\VPN::byID:
-                    $searchMethod = $this->openBlu->database->real_escape_string($searchMethod);
+                    $searchMethod = $this->OpenBlu->getDatabase()->real_escape_string($searchMethod);
                     $input = (int)$input;
                     break;
 
@@ -154,11 +157,11 @@
                 'last_updated',
                 'created'
             ], $searchMethod, $input);
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
             else
             {
@@ -196,54 +199,54 @@
                 throw new InvalidIPAddressException();
             }
 
-            $ID = (int)$vpn->ID;
-            $HostName = $this->openBlu->database->real_escape_string($vpn->HostName);
-            $IPAddress = $this->openBlu->database->real_escape_string($vpn->IP);
-            $Score = (int)$vpn->Score;
-            $Ping = (int)$vpn->Ping;
-            $Country = $this->openBlu->database->real_escape_string($vpn->Country);
-            $CountryShort = $this->openBlu->database->real_escape_string(strtoupper($vpn->CountryShort));
-            $Sessions = (int)$vpn->Sessions;
-            $TotalSessions = (int)$vpn->TotalSessions;
-            $LastUpdated = (int)time();
+            $ID = $vpn->ID;
+            $HostName = $this->OpenBlu->getDatabase()->real_escape_string($vpn->HostName);
+            $IPAddress = $this->OpenBlu->getDatabase()->real_escape_string($vpn->IP);
+            $Score = $vpn->Score;
+            $Ping = $vpn->Ping;
+            $Country = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Country);
+            $CountryShort = $this->OpenBlu->getDatabase()->real_escape_string(strtoupper($vpn->CountryShort));
+            $Sessions = $vpn->Sessions;
+            $TotalSessions = $vpn->TotalSessions;
+            $LastUpdated = time();
 
-            $ConfigurationParameters = $this->openBlu->database->real_escape_string(json_encode($vpn->ConfigurationParameters));
-            $CertificateAuthority = $this->openBlu->database->real_escape_string($vpn->CertificateAuthority);
-            $Certificate = $this->openBlu->database->real_escape_string($vpn->Certificate);
-            $Key = $this->openBlu->database->real_escape_string($vpn->Key);
+            $ConfigurationParameters = $this->OpenBlu->getDatabase()->real_escape_string(json_encode($vpn->ConfigurationParameters));
+            $CertificateAuthority = $this->OpenBlu->getDatabase()->real_escape_string($vpn->CertificateAuthority);
+            $Certificate = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Certificate);
+            $Key = $this->OpenBlu->getDatabase()->real_escape_string($vpn->Key);
 
-            $Query = QueryBuilder::update('vpns', array(
-                'host_name' => $HostName,
-                'ip_address' => $IPAddress,
-                'score' => $Score,
-                'ping' => $Ping,
-                'country' => $Country,
-                'country_short' => $CountryShort,
-                'sessions' => $Sessions,
-                'total_sessions' => $TotalSessions,
-                'configuration_parameters' => $ConfigurationParameters,
-                'certificate_authority' => $CertificateAuthority,
-                'certificate' => $Certificate,
-                '`key`' => $Key,
-                'last_updated' => $LastUpdated
-            ), 'id', $ID);
-            $QueryResults = $this->openBlu->database->query($Query);
+            $Query = QueryBuilder::update("vpns", array(
+                "host_name" => $HostName,
+                "ip_address" => $IPAddress,
+                "score" => $Score,
+                "ping" => $Ping,
+                "country" => $Country,
+                "country_short" => $CountryShort,
+                "sessions" => $Sessions,
+                "total_sessions" => $TotalSessions,
+                "configuration_parameters" => $ConfigurationParameters,
+                "certificate_authority" => $CertificateAuthority,
+                "certificate" => $Certificate,
+                "`key`" => $Key,
+                "last_updated" => $LastUpdated
+            ), "id", $ID);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == true)
             {
-                $this->openBlu->getDeepAnalytics()->tally('openblu', 'updated_servers', 0);
+                $this->OpenBlu->getDeepAnalytics()->tally("openblu", "updated_servers", 0);
                 return true;
             }
             else
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
         }
 
         /**
          * Determines if the VPN exists in the database
          *
-         * @param string|\OpenBlu\Abstracts\SearchMethods\VPN $searchMethod
+         * @param string $searchMethod
          * @param string $input
          * @return bool
          * @throws DatabaseException
@@ -256,7 +259,7 @@
                 $this->getVPN($searchMethod, $input);
                 return true;
             }
-            catch(VPNNotFoundException $VPNNotFoundException)
+            catch(VPNNotFoundException)
             {
                 return false;
             }
@@ -301,14 +304,14 @@
         public function totalServers(): int
         {
             $Query = "SELECT COUNT(id) AS total FROM `vpns`";
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
                 return 0;
             }
 
-            return (int)$QueryResults->fetch_array()['total'];
+            return (int)$QueryResults->fetch_array()["total"];
         }
 
         /**
@@ -320,7 +323,7 @@
         public function currentSessions(): int
         {
             $Query = "SELECT sessions FROM `vpns`";
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
@@ -331,7 +334,7 @@
 
             while($Row = $QueryResults->fetch_array())
             {
-                $Results += (int)$Row['sessions'];
+                $Results += (int)$Row["sessions"];
             }
 
             return $Results;
@@ -346,7 +349,7 @@
         public function totalSessions(): int
         {
             $Query = "SELECT total_sessions FROM `vpns`";
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
@@ -357,7 +360,7 @@
 
             while($Row = $QueryResults->fetch_array())
             {
-                $Results += (int)$Row['total_sessions'];
+                $Results += (int)$Row["total_sessions"];
             }
 
             return $Results;
@@ -371,24 +374,15 @@
          */
         public function totalServerPages(): int
         {
-            $Query = "SELECT id FROM `vpns`";
-            $QueryResults = $this->openBlu->database->query($Query);
+            $Query = "select count(1) FROM vpns";
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
-            else
-            {
-                if($QueryResults->num_rows == 0)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return ceil($QueryResults->num_rows / 100);
-                }
-            }
+
+            return ceil($QueryResults->fetch_array()[0] / 100);
         }
 
         /**
@@ -414,12 +408,8 @@
                 throw new PageNotFoundException();
             }
 
-            $Query = null;
-            if($page == 1)
-            {
-                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY `sessions` DESC LIMIT 0, 100";
-            }
-            else
+            $StartingItem = 0;
+            if($page !== 1)
             {
                 $CurrentPage = 0;
                 $StartingItem = 0;
@@ -433,14 +423,27 @@
                         break;
                     }
                 }
-
-                $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY `sessions` DESC LIMIT $StartingItem, 100";
             }
 
-            $QueryResults = $this->openBlu->database->query($Query);
+            $Query = QueryBuilder::select("vpns", [
+                "id",
+                "public_id",
+                "host_name",
+                "ip_address",
+                "score",
+                "ping",
+                "country",
+                "country_short",
+                "sessions",
+                "total_sessions",
+                "last_updated",
+                "created"
+            ], null, null, "sessions", SortBy::descending, $StartingItem, 100);
+
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
             else
             {
@@ -465,11 +468,11 @@
         public function getPopularServers(): array
         {
             $Query = "SELECT id, public_id, host_name, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns` ORDER BY  `sessions` DESC LIMIT 0, 5";
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
 
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
             else
             {
@@ -488,19 +491,20 @@
         /**
          * Gets a list of servers, via various filters
          *
-         * @param FilterType|string $filter_type
+         * @param string $filter_type
          * @param string $filter_value
-         * @param OrderBy|string $order_by
-         * @param OrderDirection|string $order_direction
+         * @param string $order_by
+         * @param string $order_direction
          * @return array
+         * @throws DatabaseException
          * @throws InvalidFilterTypeException
+         * @throws InvalidFilterValueException
          * @throws InvalidOrderByTypeException
          * @throws InvalidOrderDirectionException
-         * @throws InvalidFilterValueException
-         * @throws DatabaseException
          * @throws NoResultsFoundException
+         * @noinspection PhpArrayShapeAttributeCanBeAddedInspection
          */
-        public function filterGetServers(string $filter_type = FilterType::None, string $filter_value = 'OPTIONAL', string $order_by = OrderBy::byLastUpdated, string $order_direction = OrderDirection::Ascending): array
+        public function filterGetServers(string $filter_type = FilterType::None, string $filter_value = "OPTIONAL", string $order_by = OrderBy::byLastUpdated, string $order_direction = OrderDirection::Ascending): array
         {
             $Query = "SELECT id, public_id, ip_address, score, ping, country, country_short, sessions, total_sessions, last_updated, created FROM `vpns`";
 
@@ -516,9 +520,9 @@
                     }
 
                     $filter_value = strtoupper($filter_value);
-                    $filter_value = $this->openBlu->database->real_escape_string($filter_value);
+                    $filter_value = $this->OpenBlu->getDatabase()->real_escape_string($filter_value);
 
-                    $Query .= " WHERE country_short='$filter_value'";
+                    $Query .= " WHERE country_short=\"$filter_value\"";
 
                     break;
 
@@ -552,6 +556,7 @@
                     throw new InvalidOrderByTypeException();
             }
 
+            /** @noinspection PhpSwitchCanBeReplacedWithMatchExpressionInspection */
             switch($order_direction)
             {
                 case OrderDirection::Ascending:
@@ -566,10 +571,10 @@
                     throw new InvalidOrderDirectionException();
             }
 
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->OpenBlu->getDatabase()->query($Query);
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->OpenBlu->getDatabase()->error, $Query);
             }
             else
             {
@@ -579,24 +584,24 @@
                 }
 
                 $Results = array(
-                    'total_results' => $QueryResults->num_rows,
-                    'servers' => []
+                    "total_results" => $QueryResults->num_rows,
+                    "servers" => []
                 );
 
                 while ($Row = $QueryResults->fetch_assoc())
                 {
-                    $Results['servers'][] = array(
-                        'id'             => $Row['id'],
-                        'public_id'      => $Row['public_id'],
-                        'ip_address'     => $Row['ip_address'],
-                        'score'          => (int)$Row['score'],
-                        'ping'           => (int)$Row['ping'],
-                        'country'        => $Row['country'],
-                        'country_short'  => $Row['country_short'],
-                        'sessions'       => (int)$Row['sessions'],
-                        'total_sessions' => (int)$Row['total_sessions'],
-                        'last_updated'   => (int)$Row['last_updated'],
-                        'created'        => (int)$Row['created']
+                    $Results["servers"][] = array(
+                        "id"             => $Row["id"],
+                        "public_id"      => $Row["public_id"],
+                        "ip_address"     => $Row["ip_address"],
+                        "score"          => (int)$Row["score"],
+                        "ping"           => (int)$Row["ping"],
+                        "country"        => $Row["country"],
+                        "country_short"  => $Row["country_short"],
+                        "sessions"       => (int)$Row["sessions"],
+                        "total_sessions" => (int)$Row["total_sessions"],
+                        "last_updated"   => (int)$Row["last_updated"],
+                        "created"        => (int)$Row["created"]
                     );
                 }
 

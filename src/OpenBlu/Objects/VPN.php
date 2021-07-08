@@ -1,6 +1,6 @@
-<?php
+<?php /** @noinspection PhpMissingFieldTypeInspection */
 
-    namespace OpenBlu\Objects;
+namespace OpenBlu\Objects;
     use OpenBlu\Abstracts\DefaultValues;
     use OpenBlu\OpenBlu;
 
@@ -130,22 +130,22 @@
         public function toArray(): array
         {
             return array(
-                'id' => (int)$this->ID,
+                'id' => $this->ID,
                 'public_id' => $this->PublicID,
                 'host_name' => $this->HostName,
                 'ip_address' => $this->IP,
-                'score' => (int)$this->Score,
-                'ping' => (int)$this->Ping,
+                'score' => $this->Score,
+                'ping' => $this->Ping,
                 'country' => $this->Country,
                 'country_short' => $this->CountryShort,
-                'sessions' => (int)$this->Sessions,
-                'total_sessions' => (int)$this->TotalSessions,
+                'sessions' => $this->Sessions,
+                'total_sessions' => $this->TotalSessions,
                 'configuration_parameters' => $this->ConfigurationParameters,
                 'certificate_authority' => $this->CertificateAuthority,
                 'certificate' => $this->Certificate,
                 'key' => $this->Key,
-                'last_updated' => (int)$this->LastUpdated,
-                'created' => (int)$this->Created
+                'last_updated' => $this->LastUpdated,
+                'created' => $this->Created
             );
         }
 
@@ -154,6 +154,7 @@
          *
          * @param array $data
          * @return VPN
+         * @noinspection DuplicatedCode
          */
         public static function fromArray(array $data): VPN
         {
@@ -335,30 +336,23 @@
                 switch(strtolower($key))
                 {
                     case "dev":
-                        $configuration_data .= OpenBlu::getResource('docs_dev.txt');
-                        $configuration_data .= "\n\n";
+                        $configuration_data .= OpenBlu::getResource('docs_dev.txt') . "\n\n";
                         break;
 
                     case "proto":
-                        $configuration_data .= OpenBlu::getResource('docs_proto.txt');
-                        $configuration_data .= "\n\n";
+                        $configuration_data .= OpenBlu::getResource('docs_proto.txt') . "\n\n";
                         break;
 
                     case "remote":
-                        $configuration_data .= OpenBlu::getResource('docs_remote.txt');
-                        $configuration_data .= "\n\n";
+                        $configuration_data .= OpenBlu::getResource('docs_remote.txt') . "\n\n";
                         break;
 
                     case "encryption":
-                        $configuration_data .= OpenBlu::getResource('docs_encryption.txt');
-                        $configuration_data .= "\n\n";
-                        break;
-
-                    case "cipher":
-                        $ignore = true;
+                        $configuration_data .= OpenBlu::getResource('docs_encryption.txt') .  "\n\n";
                         break;
 
                     case "auth":
+                    case "cipher":
                         $ignore = true;
                         break;
 
@@ -415,7 +409,7 @@
             $configuration_data .= OpenBlu::getResource('docs_proxy.txt');
             $configuration_data .= "\n\n";
 
-            $configuration_data .= $other_parameters;
+            $configuration_data .= $other_parameters . "\n\n\n\n";
             $configuration_data .= "\n\n\n\n";
 
             $configuration_data .= OpenBlu::getResource('docs_certificate_authority.txt');

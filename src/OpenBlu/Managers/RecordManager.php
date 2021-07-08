@@ -46,14 +46,14 @@
          */
         public function createRecord(string $data): UpdateRecord
         {
-            $PublicID = $this->openBlu->database->real_escape_string(Hashing::calculateUpdateRecordPublicID($data));
+            $PublicID = $this->openBlu->Database->real_escape_string(Hashing::calculateUpdateRecordPublicID($data));
             $RequestTime = (int)time();
 
             $Query = QueryBuilder::insert_into('update_records', array(
                 'public_id' => $PublicID,
                 'request_time' => $RequestTime
             ));
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->openBlu->Database->query($Query);
 
             if($QueryResults == true)
             {
@@ -61,7 +61,7 @@
             }
             else
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->openBlu->Database->error, $Query);
             }
         }
 
@@ -80,12 +80,12 @@
             switch($searchMethod)
             {
                 case \OpenBlu\Abstracts\SearchMethods\UpdateRecord::byPublicID:
-                    $searchMethod = $this->openBlu->database->real_escape_string($searchMethod);
-                    $input = $this->openBlu->database->real_escape_string($input);
+                    $searchMethod = $this->openBlu->Database->real_escape_string($searchMethod);
+                    $input = $this->openBlu->Database->real_escape_string($input);
                     break;
 
                 case \OpenBlu\Abstracts\SearchMethods\UpdateRecord::byID:
-                    $searchMethod = $this->openBlu->database->real_escape_string($searchMethod);
+                    $searchMethod = $this->openBlu->Database->real_escape_string($searchMethod);
                     $input = (int)$input;
                     break;
 
@@ -98,11 +98,11 @@
                 'public_id',
                 'request_time'
             ], $searchMethod, $input);
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->openBlu->Database->query($Query);
 
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->openBlu->Database->error, $Query);
             }
             else
             {

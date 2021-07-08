@@ -59,7 +59,7 @@
                 'status' => $status,
                 'created_timestamp' => $created_timestamp
             ));
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->openBlu->Database->query($Query);
 
             if($QueryResults == true)
             {
@@ -67,7 +67,7 @@
             }
             else
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->openBlu->Database->error, $Query);
             }
         }
 
@@ -89,7 +89,7 @@
                 case UserSubscriptionSearchMethod::bySubscriptionID:
                 case UserSubscriptionSearchMethod::byAccessRecordID:
                 case UserSubscriptionSearchMethod::byAccountID:
-                    $search_method = $this->openBlu->database->real_escape_string($search_method);
+                    $search_method = $this->openBlu->Database->real_escape_string($search_method);
                     $value = (int)$value;
                     break;
 
@@ -100,11 +100,11 @@
             $Query = QueryBuilder::select('user_subscriptions', [
                 'id', 'account_id', 'subscription_id', 'access_record_id', 'status', 'created_timestamp'
             ], $search_method, $value);
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->openBlu->Database->query($Query);
 
             if($QueryResults == false)
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->openBlu->Database->error, $Query);
             }
             else
             {
@@ -142,7 +142,7 @@
                 'subscription_id' => $subscription_id,
                 'status' => $status
             ), 'id', $id);
-            $QueryResults = $this->openBlu->database->query($Query);
+            $QueryResults = $this->openBlu->Database->query($Query);
 
             if($QueryResults == true)
             {
@@ -150,7 +150,7 @@
             }
             else
             {
-                throw new DatabaseException($this->openBlu->database->error, $Query);
+                throw new DatabaseException($this->openBlu->Database->error, $Query);
             }
         }
     }
