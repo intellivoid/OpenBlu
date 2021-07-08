@@ -130,22 +130,22 @@ namespace OpenBlu\Objects;
         public function toArray(): array
         {
             return array(
-                'id' => $this->ID,
-                'public_id' => $this->PublicID,
-                'host_name' => $this->HostName,
-                'ip_address' => $this->IP,
-                'score' => $this->Score,
-                'ping' => $this->Ping,
-                'country' => $this->Country,
-                'country_short' => $this->CountryShort,
-                'sessions' => $this->Sessions,
-                'total_sessions' => $this->TotalSessions,
-                'configuration_parameters' => $this->ConfigurationParameters,
-                'certificate_authority' => $this->CertificateAuthority,
-                'certificate' => $this->Certificate,
-                'key' => $this->Key,
-                'last_updated' => $this->LastUpdated,
-                'created' => $this->Created
+                "id" => $this->ID,
+                "public_id" => $this->PublicID,
+                "host_name" => $this->HostName,
+                "ip_address" => $this->IP,
+                "score" => $this->Score,
+                "ping" => $this->Ping,
+                "country" => $this->Country,
+                "country_short" => $this->CountryShort,
+                "sessions" => $this->Sessions,
+                "total_sessions" => $this->TotalSessions,
+                "configuration_parameters" => $this->ConfigurationParameters,
+                "certificate_authority" => $this->CertificateAuthority,
+                "certificate" => $this->Certificate,
+                "key" => $this->Key,
+                "last_updated" => $this->LastUpdated,
+                "created" => $this->Created
             );
         }
 
@@ -160,144 +160,144 @@ namespace OpenBlu\Objects;
         {
             $VPNObject = new VPN();
 
-            if(isset($data['id']))
+            if(isset($data["id"]))
             {
-                $VPNObject->ID = (int)$data['id'];
+                $VPNObject->ID = (int)$data["id"];
             }
             else
             {
                 $VPNObject->ID = 0;
             }
 
-            if(isset($data['public_id']))
+            if(isset($data["public_id"]))
             {
-                $VPNObject->PublicID = (string)$data['public_id'];
+                $VPNObject->PublicID = (string)$data["public_id"];
             }
             else
             {
                 $VPNObject->PublicID = DefaultValues::None;
             }
 
-            if(isset($data['host_name']))
+            if(isset($data["host_name"]))
             {
-                $VPNObject->HostName = (string)$data['host_name'];
+                $VPNObject->HostName = (string)$data["host_name"];
             }
             else
             {
                 $VPNObject->HostName = DefaultValues::Unknown;
             }
 
-            if(isset($data['ip_address']))
+            if(isset($data["ip_address"]))
             {
-                $VPNObject->IP = (string)$data['ip_address'];
+                $VPNObject->IP = (string)$data["ip_address"];
             }
             else
             {
                 $VPNObject->IP = DefaultValues::Unknown;
             }
 
-            if(isset($data['score']))
+            if(isset($data["score"]))
             {
-                $VPNObject->Score = (int)$data['score'];
+                $VPNObject->Score = (int)$data["score"];
             }
             else
             {
                 $VPNObject->Score = 0;
             }
 
-            if(isset($data['ping']))
+            if(isset($data["ping"]))
             {
-                $VPNObject->Ping = (int)$data['ping'];
+                $VPNObject->Ping = (int)$data["ping"];
             }
             else
             {
                 $VPNObject->Ping = 0;
             }
 
-            if(isset($data['country']))
+            if(isset($data["country"]))
             {
-                $VPNObject->Country = (string)$data['country'];
+                $VPNObject->Country = (string)$data["country"];
             }
             else
             {
                 $VPNObject->Country = DefaultValues::Unknown;
             }
 
-            if(isset($data['country_short']))
+            if(isset($data["country_short"]))
             {
-                $VPNObject->CountryShort = (string)$data['country_short'];
+                $VPNObject->CountryShort = (string)$data["country_short"];
             }
             else
             {
                 $VPNObject->CountryShort = DefaultValues::Unknown;
             }
 
-            if(isset($data['sessions']))
+            if(isset($data["sessions"]))
             {
-                $VPNObject->Sessions = (int)$data['sessions'];
+                $VPNObject->Sessions = (int)$data["sessions"];
             }
             else
             {
                 $VPNObject->Sessions = 0;
             }
 
-            if(isset($data['total_sessions']))
+            if(isset($data["total_sessions"]))
             {
-                $VPNObject->TotalSessions = (int)$data['total_sessions'];
+                $VPNObject->TotalSessions = (int)$data["total_sessions"];
             }
             else
             {
                 $VPNObject->TotalSessions = 0;
             }
 
-            if(isset($data['configuration_parameters']))
+            if(isset($data["configuration_parameters"]))
             {
-                $VPNObject->ConfigurationParameters = $data['configuration_parameters'];
+                $VPNObject->ConfigurationParameters = $data["configuration_parameters"];
             }
             else
             {
                 $VPNObject->ConfigurationParameters = [];
             }
 
-            if(isset($data['certificate_authority']))
+            if(isset($data["certificate_authority"]))
             {
-                $VPNObject->CertificateAuthority = $data['certificate_authority'];
+                $VPNObject->CertificateAuthority = $data["certificate_authority"];
             }
             else
             {
                 $VPNObject->CertificateAuthority = DefaultValues::None;
             }
 
-            if(isset($data['certificate']))
+            if(isset($data["certificate"]))
             {
-                $VPNObject->Certificate = $data['certificate'];
+                $VPNObject->Certificate = $data["certificate"];
             }
             else
             {
                 $VPNObject->CertificateAuthority = DefaultValues::None;
             }
 
-            if(isset($data['key']))
+            if(isset($data["key"]))
             {
-                $VPNObject->Key = $data['key'];
+                $VPNObject->Key = $data["key"];
             }
             else
             {
                 $VPNObject->Key = DefaultValues::None;
             }
 
-            if(isset($data['created']))
+            if(isset($data["created"]))
             {
-                $VPNObject->Created = (int)$data['created'];
+                $VPNObject->Created = (int)$data["created"];
             }
             else
             {
                 $VPNObject->Created = 0;
             }
 
-            if(isset($data['last_updated']))
+            if(isset($data["last_updated"]))
             {
-                $VPNObject->LastUpdated = (int)$data['last_updated'];
+                $VPNObject->LastUpdated = (int)$data["last_updated"];
             }
             else
             {
@@ -314,18 +314,18 @@ namespace OpenBlu\Objects;
          */
         public function createConfiguration(): string
         {
-            $configuration_data = OpenBlu::getResource('configuration_header.txt');
+            $configuration_data = OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "configuration_header.txt");
             $configuration_data .= "\n\n";
 
-            $vpn_information = OpenBlu::getResource('vpn_information.txt');
-            $vpn_information = str_ireplace('%PUBLIC_ID%', $this->PublicID, $vpn_information);
-            $vpn_information = str_ireplace('%COUNTRY%', $this->Country, $vpn_information);
-            $vpn_information = str_ireplace('%SCORE%', $this->Score, $vpn_information);
+            $vpn_information = OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "vpn_information.txt");
+            $vpn_information = str_ireplace("%PUBLIC_ID%", $this->PublicID, $vpn_information);
+            $vpn_information = str_ireplace("%COUNTRY%", $this->Country, $vpn_information);
+            $vpn_information = str_ireplace("%SCORE%", $this->Score, $vpn_information);
 
             $configuration_data .= $vpn_information;
             $configuration_data .= "\n\n";
 
-            $other_parameters = OpenBlu::getResource('other_parameters.txt');
+            $other_parameters = OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "other_parameters.txt");
             $other_parameters .= "\n\n";
 
             foreach($this->ConfigurationParameters as $key => $value)
@@ -336,19 +336,19 @@ namespace OpenBlu\Objects;
                 switch(strtolower($key))
                 {
                     case "dev":
-                        $configuration_data .= OpenBlu::getResource('docs_dev.txt') . "\n\n";
+                        $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_dev.txt") . "\n\n";
                         break;
 
                     case "proto":
-                        $configuration_data .= OpenBlu::getResource('docs_proto.txt') . "\n\n";
+                        $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_proto.txt") . "\n\n";
                         break;
 
                     case "remote":
-                        $configuration_data .= OpenBlu::getResource('docs_remote.txt') . "\n\n";
+                        $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_remote.txt") . "\n\n";
                         break;
 
                     case "encryption":
-                        $configuration_data .= OpenBlu::getResource('docs_encryption.txt') .  "\n\n";
+                        $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_encryption.txt") .  "\n\n";
                         break;
 
                     case "auth":
@@ -388,39 +388,39 @@ namespace OpenBlu\Objects;
                 }
             }
 
-            if(isset($this->ConfigurationParameters['cipher']) || isset($this->ConfigurationParameters['auth']))
+            if(isset($this->ConfigurationParameters["cipher"]) || isset($this->ConfigurationParameters["auth"]))
             {
-                $configuration_data .= OpenBlu::getResource('docs_encryption.txt');
+                $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_encryption.txt");
                 $configuration_data .= "\n\n";
 
-                if(isset($this->ConfigurationParameters['cipher']))
+                if(isset($this->ConfigurationParameters["cipher"]))
                 {
-                    $configuration_data .= 'cipher ' . $this->ConfigurationParameters['cipher'] . "\n";
+                    $configuration_data .= "cipher " . $this->ConfigurationParameters["cipher"] . "\n";
                 }
 
-                if(isset($this->ConfigurationParameters['auth']))
+                if(isset($this->ConfigurationParameters["auth"]))
                 {
-                    $configuration_data .= 'auth ' . $this->ConfigurationParameters['auth'] . "\n";
+                    $configuration_data .= "auth " . $this->ConfigurationParameters["auth"] . "\n";
                 }
 
                 $configuration_data .= "\n";
             }
 
-            $configuration_data .= OpenBlu::getResource('docs_proxy.txt');
+            $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_proxy.txt");
             $configuration_data .= "\n\n";
 
             $configuration_data .= $other_parameters . "\n\n\n\n";
             $configuration_data .= "\n\n\n\n";
 
-            $configuration_data .= OpenBlu::getResource('docs_certificate_authority.txt');
+            $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_certificate_authority.txt");
             $configuration_data .= "\n\n" . "<ca>\n" . $this->CertificateAuthority . "\n</ca>\n\n";
 
-            $configuration_data .= OpenBlu::getResource('docs_certificate.txt');
+            $configuration_data .= OpenBlu::getResource("openvpn" . DIRECTORY_SEPARATOR . "docs_certificate.txt");
             $configuration_data .= "\n\n";
 
             $configuration_data .= "<cert>\n" . $this->Certificate . "\n</cert>\n\n";
             $configuration_data .= "<key>\n" . $this->Key . "\n</key>\n\n";
 
-            return preg_replace('~\R~u', "\r\n", $configuration_data);
+            return preg_replace("~\R~u", "\r\n", $configuration_data);
         }
     }

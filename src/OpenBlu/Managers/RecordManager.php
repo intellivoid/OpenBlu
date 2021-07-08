@@ -69,7 +69,7 @@
          * Fetches an existing update record from the database
          *
          * @param string $searchMethod
-         * @param string|\OpenBlu\Abstracts\SearchMethods\UpdateRecord $input
+         * @param string $input
          * @return UpdateRecord
          * @throws DatabaseException
          * @throws InvalidSearchMethodException
@@ -126,6 +126,7 @@
          * @throws SyncException
          * @throws UpdateRecordNotFoundException
          * @throws VPNNotFoundException
+         * @noinspection HttpUrlsUsage
          */
         public function sync(string $endpoint = "http://www.vpngate.net/api/iphone", bool $cli_logging=False)
         {
@@ -134,13 +135,13 @@
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
             curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true);
             curl_setopt($curl, CURLOPT_URL, $endpoint);
-            curl_setopt($curl, CURLOPT_USERAGENT, 'OpenBlu/1.0 (Library)');
+            curl_setopt($curl, CURLOPT_USERAGENT, 'OpenBlu/2.0 (Library)');
             curl_setopt($curl, CURLOPT_FAILONERROR, true);
 
             curl_setopt_array($curl, array(
                 CURLOPT_RETURNTRANSFER => 1,
                 CURLOPT_URL => $endpoint,
-                CURLOPT_USERAGENT => 'OpenBlu/1.0 (Library)'
+                CURLOPT_USERAGENT => 'OpenBlu/2.0 (Library)'
             ));
 
             if($cli_logging){ print("Making HTTP request to Gateway ..." . PHP_EOL); }
@@ -166,7 +167,7 @@
                 $this->getRecord(\OpenBlu\Abstracts\SearchMethods\UpdateRecord::byPublicID, $PublicID);
                 //return;
             }
-            catch(UpdateRecordNotFoundException $updateRecordNotFoundException)
+            catch(UpdateRecordNotFoundException)
             {
                 $this->createRecord($Response);
             }
@@ -186,8 +187,6 @@
          */
         private function writeRecordFile(string $publicID, string $data): string
         {
-            $RecordFile = null;
-
             if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
             {
                 $RecordFile = $this->openBlu->getRecordDirectoryConfiguration()['WIN_RecordDirectory'] . DIRECTORY_SEPARATOR . $publicID . '.csv';
@@ -215,7 +214,7 @@
          * @throws InvalidSearchMethodException
          * @throws VPNNotFoundException
          */
-        private function importCSV(string $RecordFile, $cli_logging=False)
+        private function importCSV(string $RecordFile, bool $cli_logging=False)
         {
             if(($handle = fopen($RecordFile, 'r')) !== false)
             {
