@@ -12,7 +12,5 @@
         FilterType::None,
         'None',
         OrderBy::byCurrentSessions,
-        OrderDirection::Ascending,
-        100,
-        0
+        OrderDirection::Ascending
     ), JSON_PRETTY_PRINT));
