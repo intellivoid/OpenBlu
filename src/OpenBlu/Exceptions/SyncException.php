@@ -8,6 +8,8 @@
     /**
      * Class SyncException
      * @package OpenBlu\Exceptions
+     * @deprecated Use CrawlerException instead
+     * @see CrawlerException
      */
     class SyncException extends Exception
     {

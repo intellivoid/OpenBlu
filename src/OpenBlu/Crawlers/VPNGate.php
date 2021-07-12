@@ -8,6 +8,7 @@
     use Objects\CrawlError;
     use OpenBlu\Abstracts\SearchMethods\UpdateRecord;
     use OpenBlu\Abstracts\Types\ResultObjectType;
+    use OpenBlu\Exceptions\CrawlerException;
     use OpenBlu\Exceptions\DatabaseException;
     use OpenBlu\Exceptions\InvalidSearchMethodException;
     use OpenBlu\Exceptions\SyncException;
@@ -82,12 +83,11 @@
 
             if($Error)
             {
-                // TODO: Convert to a crawler exception
-                $syncException = new SyncException($Error);
+                $crawlerException = new CrawlerException($Error);
                 $openBlu->getLog()->log(EventType::ERROR, "HTTP Error: " . $Error, $this->SourceName);
-                $openBlu->getLog()->logException($syncException, $this->SourceName);
+                $openBlu->getLog()->logException($crawlerException, $this->SourceName);
 
-                throw $syncException;
+                throw $crawlerException;
             }
 
             $PublicID = Hashing::calculateUpdateRecordPublicID($Response);

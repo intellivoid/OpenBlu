@@ -14,7 +14,7 @@
     use OpenBlu\Managers\VPNManager;
     use VerboseAdventure\VerboseAdventure;
 
-    include_once(__DIR__ . DIRECTORY_SEPARATOR . "AutoConfig.php");
+    //include_once(__DIR__ . DIRECTORY_SEPARATOR . "AutoConfig.php");
 
     /**
      * Class OpenBlu
@@ -51,7 +51,7 @@
         /**
          * @var mixed
          */
-        private $RecordDirectoryConfiguration;
+        private $CrawlerConfiguration;
 
         /**
          * @var UserSubscriptionManager
@@ -83,14 +83,15 @@
             $DatabaseSchema->setDefinition("Password", "");
             $DatabaseSchema->setDefinition("Name", "openblu");
 
-            $RecordDirectorySchema = new Schema();
-            $RecordDirectorySchema->setDefinition("TemporaryDirectory", "/tmp");
+            $CrawlerSchema = new Schema();
+            $CrawlerSchema->setDefinition("UserAgent", "OpenBlu/2.0 Intellivoid Technologies (WebCrawler)");
+            $CrawlerSchema->setDefinition("TemporaryDirectory", "/tmp");
 
             $this->acm->defineSchema("Database", $DatabaseSchema);
-            $this->acm->defineSchema("RecordDirectory", $RecordDirectorySchema);
+            $this->acm->defineSchema("Crawler", $CrawlerSchema);
 
             $this->DatabaseConfiguration = $this->acm->getConfiguration("Database");
-            $this->RecordDirectoryConfiguration = $this->acm->getConfiguration("RecordDirectory");
+            $this->CrawlerConfiguration = $this->acm->getConfiguration("Crawler");
 
             $this->Database = new mysqli(
                 $this->DatabaseConfiguration["Host"],
@@ -142,15 +143,6 @@
         }
 
         /**
-         * @return mixed
-         * @noinspection PhpMissingReturnTypeInspection
-         */
-        public function getRecordDirectoryConfiguration()
-        {
-            return $this->RecordDirectoryConfiguration;
-        }
-
-        /**
          * @return acm
          */
         public function getAcm(): acm
@@ -188,5 +180,13 @@
         public function getLog(): VerboseAdventure
         {
             return $this->Log;
+        }
+
+        /**
+         * @return mixed
+         */
+        public function getCrawlerConfiguration(): mixed
+        {
+            return $this->CrawlerConfiguration;
         }
     }

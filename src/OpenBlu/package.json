@@ -87,7 +87,19 @@
         },
         {
             "required": true,
+            "file": "Crawlers/RadioBrowse.php"
+        },
+        {
+            "required": true,
             "file": "Crawlers/VPNGate.php"
+        },
+        {
+            "required": true,
+            "file": "Crawlers/RadioBrowse/Station.php"
+        },
+        {
+            "required": true,
+            "file": "Crawlers/RadioBrowse/SearchOrder.php"
         },
         {
             "required": true,
@@ -120,6 +132,10 @@
         {
             "required": true,
             "file": "Exceptions/InvalidOrderByTypeException.php"
+        },
+        {
+            "required": true,
+            "file": "Exceptions/CrawlerException.php"
         },
         {
             "required": true,
@@ -168,10 +184,6 @@
         {
             "required": true,
             "file": "Interfaces/CrawlerInterface.php"
-        },
-        {
-            "required": true,
-            "file": "AutoConfig.php"
         },
         {
             "required": true,
