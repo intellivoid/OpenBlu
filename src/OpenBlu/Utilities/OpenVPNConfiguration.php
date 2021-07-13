@@ -32,12 +32,13 @@
 
                 if (isset($match['param']) && $match['param'] !== '')
                 {
-                    list($key, $value) = explode(" ", $match['param'], 2);
-                    $value = trim($value);
+                    $values = explode(" ", $match['param'], 2);
+                    $key = trim($values[0]);
+                    $value = null;
 
-                    if (empty($value) == true)
-                        $value = null;
-                    
+                    if (isset($values[1]))
+                        $value = $values[1];
+
                     $results['parameters'][trim($key)] = $value;
                 }
             }
