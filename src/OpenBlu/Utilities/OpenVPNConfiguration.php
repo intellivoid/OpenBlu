@@ -17,17 +17,24 @@
         public static function parseConfiguration(string $data): array
         {
             $data = self::stripConfiguration($data);
-            $results = array();
+            $results = array(
+                "parameters" => array()
+            );
 
-            $results['ca'] = self::getTag($data, 'ca');
-            $results['cert'] = self::getTag($data, 'cert');
-            $results['key'] = self::getTag($data, 'key');
+            preg_match_all("#<(?'tag'\s*?\b[^>]*)>(?'tagdata'.*?)<\/\b[^>]*>|^(?'param'[^\r\n]*)#ms", $data, $matches, PREG_SET_ORDER);
 
-            $data = str_ireplace(sprintf("<ca>\r\n%s\r\n</ca>", $results['ca']), '', $data);
-            $data = str_ireplace(sprintf("<cert>\r\n%s\r\n</cert>", $results['cert']), '', $data);
-            $data = str_ireplace(sprintf("<key>\r\n%s\r\n</key>", $results['key']), '', $data);
+            foreach($matches as $index => $match)
+            {
+                if (isset($match['tag']) && $match['tag'] !== '')
+                {
+                    $results[trim($match['tag'])] = trim($match['tagdata']);
+                }
 
-            $results['parameters'] = self::extractParameters($data);
+                if (isset($match['param']) && $match['param'] !== '')
+                {
+                    $results['parameters'][] = trim($match['param']);
+                }
+            }
 
             return $results;
         }
@@ -40,68 +47,10 @@
          */
         public static function stripConfiguration(string $data): string
         {
-            $output = '';
-
-            foreach(explode("\r\n", $data) as $line)
-            {
-                if(strlen($line) > 0)
-                {
-                    if(substr($line, 0, 1) !== '#')
-                    {
-                        if(substr($line, 0, 1) !== ';')
-                        {
-                            $output .= $line . "\r\n";
-                        }
-                    }
-                }
-            }
-
+            // Remove comments first
+            $output = preg_replace("/[#;][^\r\n]*/ms", "", $data);
+            // Strip empty lines
+            $output = preg_replace("/[\r\n]{2,}/ms", "\n", $output);
             return $output;
-        }
-
-        /**
-         * Extracts all parameters from the configuration file
-         *
-         * @param string $data
-         * @return array
-         */
-        public static function extractParameters(string $data): array
-        {
-            $parameters = [];
-
-            foreach(explode("\r\n", $data) as $line)
-            {
-                $parameter = explode(' ', $line);
-                if(isset($parameter[1]))
-                {
-                    if(isset($parameter[2]))
-                    {
-                        $parameters[$parameter[0]] = $parameter[1] . ' ' . $parameter[2];
-                    }
-                    else
-                    {
-                        $parameters[$parameter[0]] = $parameter[1];
-                    }
-                }
-                else
-                {
-                    $parameters[$parameter[0]] = null;
-                }
-            }
-
-            return $parameters;
-        }
-
-        /**
-         * Extracts a tag from the configuration
-         *
-         * @param string $data
-         * @param string $tag
-         * @return string
-         */
-        public static function getTag(string $data, string $tag)
-        {
-            preg_match("#<\s*?$tag\b[^>]*>(.*?)</$tag\b[^>]*>#s", $data, $matches);
-            return trim($matches[1]);
         }
     }
